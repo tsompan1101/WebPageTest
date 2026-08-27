@@ -1,0 +1,30 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import Hero from "@/components/Hero";
+import ContentBlock from "@/components/ContentBlock";
+import SdgSection from "@/components/SdgSection";
+import LogoBar from "@/components/LogoBar";
+import Footer from "@/components/Footer";
+import { contentBlocks } from "@/data/content";
+---
+
+<Layout title="Sedener">
+    <Hero currentPath={Astro.url.pathname} client:load />
+
+    {
+        contentBlocks.map((block) => (
+            <ContentBlock
+                title={block.title}
+                body={block.body}
+                image={block.image}
+                primaryCta={block.primaryCta}
+                secondaryCta={block.secondaryCta}
+                imageSide={block.imageSide}
+            />
+        ))
+    }
+
+    <SdgSection client:visible />
+    <LogoBar />
+    <Footer />
+</Layout>

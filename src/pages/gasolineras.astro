@@ -1,0 +1,35 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import Header from "@/components/Header";
+import {
+    GasolinerasImpact,
+    gasolinerasInfo,
+    gasolinerasSolutions,
+} from "@/data/content";
+import ImpactProgressSection from "@/components/Impacto";
+import DataBlock from "@/components/DataBlock";
+import ProgramSolutions from "@/components/ProgramSolutions";
+import Footer from "@/components/Footer";
+---
+
+<Layout title="Sedener">
+    <Header variant="solid" currentPath={Astro.url.pathname} client:load />
+    {
+        GasolinerasImpact.map((section) => (
+            <ImpactProgressSection data={section} client:visible />
+        ))
+    }
+    {
+        gasolinerasInfo.map((section) => (
+            <DataBlock data={[section]} client:visible />
+        ))
+    }
+    <ProgramSolutions
+        eyebrow="Requisitos y Tramites"
+        title="¿Qué se necesita para participar?"
+        description="Conoce las principales requisitos y características que se consideran para que desarrollar o incorporar una nueva estación, asi como los beneficios que brinda."
+        solutions={gasolinerasSolutions}
+        accent="orange"
+    />
+    <Footer />
+</Layout>

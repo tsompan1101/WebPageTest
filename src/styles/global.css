@@ -1,0 +1,945 @@
+/*
+Colores Pantone
+
+(Rojo)Pantone 187 C: #a50046
+(Beige Oscuro)Pantone 465 C: #ad8b4a
+(Beige Claro)Pantone 468 C: #e0d6ab
+(Gris)Pantone Cool Gray 11 C: #3a4b54
+
+*/
+/*
+@tailwind base;
+@tailwind components;
+@tailwind uilities;
+*/
+
+@import "tailwindcss";
+
+
+@theme {
+  --color-brand-dark: #14171c;
+  --color-brand-darker: #0b0d10;
+  --color-brand-orange: #a50046;
+  --color-brand-orange-dark: #a50046;
+  --color-brand-green: #2e8b4e;
+  --color-brand-cream: #f2f2f2;
+  --color-brand-ink: #1b1b18;
+  --color-brand-muted: #6b6b65;
+
+  --font-display: "Sora", ui-sans-serif, system-ui, sans-serif;
+  --font-body: "Inter", ui-sans-serif, system-ui, sans-serif;
+
+  --radius-card: 1rem;
+}
+
+@utility no-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+:root {
+  --color-bg-dark: #14171c;
+  --color-bg-darker: #0b0d10;
+  --color-accent: #e0d6ab;
+  --color-accent-dark: #ad8b4a;
+  --color-eco-green: #2e8b4e;
+  --color-bg-cream: #f6f4ef;
+  --color-ink: #1b1b18;
+  --color-muted: #6b6b65;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-ink);
+  background-color: #ffffff;
+}
+
+h1, h2, h3, h4 {
+  /*font-family: theme('fontFamily.display');*/
+}
+
+/* Respeta preferencia de movimiento reducido */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.container-page {
+  @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
+}
+
+.btn-primary {
+  @apply inline-flex items-center justify-center rounded-full bg-white px-6 py-3 text-sm font-semibold text-[#a50046] transition hover:bg-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#ad8b4a];
+}
+
+.btn-secondary {
+  @apply inline-flex items-center justify-center rounded-full border border-white/40 px-6 py-3 text-sm font-semibold text-black transition hover:border-[#a50046] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#a50046];
+}
+
+.pantone-glow {
+  position: relative;
+  isolation: isolate;
+}
+
+.pantone-glow::before {
+  content: '';
+  position: absolute;
+  inset: -3px;
+  z-index: -1;
+  border-radius: inherit;
+  background: conic-gradient(from 0deg, #a50046, #ad8b4a, #e0d6ab, #3a4b54, #a50046);
+  filter: blur(18px);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+
+.pantone-glow:hover::before,
+.pantone-glow:focus-within::before {
+  opacity: 0.85;
+}
+
+
+
+.transfer-section {
+  width: 100%;
+  max-width: 1200px;
+  margin: 80px auto;
+  padding: 0 24px;
+}
+
+.transfer-header {
+  max-width: 760px;
+  margin: 0 auto 40px;
+  text-align: center;
+}
+
+.section-label {
+  display: inline-block;
+  margin-bottom: 12px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  opacity: 0.65;
+}
+
+.transfer-header h2 {
+  margin: 0 0 16px;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+}
+
+.transfer-header p {
+  margin: 0;
+  line-height: 1.7;
+  opacity: 0.75;
+}
+
+.transfer-card {
+  max-width: 900px;
+  margin: auto;
+  padding: 35px;
+  border-radius: 20px;
+  background: #fff;
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(0, 0, 0, 0.07);
+}
+
+.transfer-data {
+  display: flex;
+  flex-direction: column;
+}
+
+.transfer-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  padding: 18px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.transfer-row:last-child {
+  border-bottom: none;
+}
+
+.transfer-row > span {
+  font-size: 0.9rem;
+  opacity: 0.65;
+}
+
+.transfer-row strong {
+  text-align: right;
+  font-size: 0.95rem;
+}
+
+.transfer-row > div {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.transfer-row button {
+  border: none;
+  border-radius: 8px;
+  padding: 7px 12px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-weight: 600;
+  background: #f1f1f1;
+  transition: 0.2s ease;
+}
+
+.transfer-row button:hover {
+  background: #e2e2e2;
+}
+
+.transfer-notice {
+  margin-top: 25px;
+  padding: 18px 20px;
+  border-radius: 12px;
+  background: #f7f7f7;
+}
+
+.transfer-notice strong {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.transfer-notice p {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  opacity: 0.7;
+}
+
+@media (max-width: 700px) {
+  .transfer-section {
+    margin: 60px auto;
+    padding: 0 16px;
+  }
+
+  .transfer-card {
+    padding: 22px;
+  }
+
+  .transfer-row {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .transfer-row strong {
+    text-align: left;
+    word-break: break-word;
+  }
+
+  .transfer-row > div {
+    flex-wrap: wrap;
+  }
+}
+
+
+.transfer-section {
+  width: 100%;
+  max-width: 1200px;
+  margin: 80px auto;
+  padding: 0 24px;
+}
+
+.transfer-header {
+  max-width: 760px;
+  margin: 0 auto 40px;
+  text-align: center;
+}
+
+.section-label {
+  display: inline-block;
+  margin-bottom: 12px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  opacity: 0.65;
+}
+
+.transfer-header h2 {
+  margin: 0 0 16px;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+}
+
+.transfer-header p {
+  margin: 0;
+  line-height: 1.7;
+  opacity: 0.75;
+}
+
+.transfer-card {
+  max-width: 900px;
+  margin: auto;
+  padding: 35px;
+  border-radius: 20px;
+  background: #fff;
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(0, 0, 0, 0.07);
+}
+
+.transfer-data {
+  display: flex;
+  flex-direction: column;
+}
+
+.transfer-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  padding: 18px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.transfer-row:last-child {
+  border-bottom: none;
+}
+
+.transfer-row > span {
+  font-size: 0.9rem;
+  opacity: 0.65;
+}
+
+.transfer-row strong {
+  text-align: right;
+  font-size: 0.95rem;
+}
+
+.transfer-row > div {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.transfer-row button {
+  border: none;
+  border-radius: 8px;
+  padding: 7px 12px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-weight: 600;
+  background: #f1f1f1;
+  transition: 0.2s ease;
+}
+
+.transfer-row button:hover {
+  background: #e2e2e2;
+}
+
+.transfer-notice {
+  margin-top: 25px;
+  padding: 18px 20px;
+  border-radius: 12px;
+  background: #f7f7f7;
+}
+
+.transfer-notice strong {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.transfer-notice p {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  opacity: 0.7;
+}
+
+@media (max-width: 700px) {
+  .transfer-section {
+    margin: 60px auto;
+    padding: 0 16px;
+  }
+
+  .transfer-card {
+    padding: 22px;
+  }
+
+  .transfer-row {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .transfer-row strong {
+    text-align: left;
+    word-break: break-word;
+  }
+
+  .transfer-row > div {
+    flex-wrap: wrap;
+  }
+}
+
+
+
+.donation-section {
+  width: 100%;
+  max-width: 1200px;
+  margin: 80px auto;
+  padding: 0 24px;
+}
+
+.donation-header {
+  max-width: 760px;
+  margin: 0 auto 45px;
+  text-align: center;
+}
+
+.donation-header h2 {
+  margin: 0 0 16px;
+  font-size: clamp(2rem, 4vw, 3rem);
+}
+
+.donation-header p {
+  margin: 0;
+  line-height: 1.7;
+  opacity: 0.75;
+}
+
+.donation-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.donation-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  padding: 26px 30px;
+  border-radius: 18px;
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.07);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.donation-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.09);
+}
+
+.donation-icon {
+  flex-shrink: 0;
+  width: 46px;
+  height: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-weight: 700;
+  background: #f1f1f1;
+}
+
+.donation-content {
+  flex: 1;
+}
+
+.donation-content h3 {
+  margin: 0 0 8px;
+  font-size: 1.2rem;
+}
+
+.donation-content p {
+  margin: 0 0 15px;
+  line-height: 1.6;
+  opacity: 0.7;
+}
+
+.donation-location {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  font-size: 0.9rem;
+}
+
+.donation-location strong {
+  margin-right: 4px;
+}
+
+.donation-location span:last-child {
+  opacity: 0.7;
+}
+
+@media (max-width: 700px) {
+  .donation-section {
+    margin: 60px auto;
+    padding: 0 16px;
+  }
+
+  .donation-item {
+    padding: 22px;
+    gap: 16px;
+  }
+
+  .donation-icon {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+
+/* Forms */
+
+.project-interest {
+  max-width: 1100px;
+  margin: 90px auto;
+  padding: 0 24px;
+}
+
+.project-interest__header {
+  max-width: 720px;
+  margin: 0 auto 45px;
+  text-align: center;
+}
+
+.project-interest__header h2 {
+  margin: 0 0 16px;
+  font-size: clamp(2rem, 4vw, 3rem);
+}
+
+.project-interest__header p {
+  margin: 0;
+  line-height: 1.7;
+  opacity: 0.7;
+}
+
+.project-interest__form {
+  padding: 40px;
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 22px;
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.07);
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-field--full {
+  grid-column: 1 / -1;
+}
+
+.form-field label {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.form-field input,
+.form-field select,
+.form-field textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 13px 15px;
+  border: 1px solid #d8d8d8;
+  border-radius: 10px;
+  background: #fff;
+  font: inherit;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-field textarea {
+  resize: vertical;
+}
+
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus {
+  outline: none;
+  border-color: #777;
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.06);
+}
+
+.form-field small {
+  font-size: 0.8rem;
+  opacity: 0.6;
+}
+
+.radio-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.radio-option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 11px 15px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.radio-option input {
+  width: auto;
+}
+
+.privacy-checkbox {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-weight: 400 !important;
+  line-height: 1.5;
+}
+
+.privacy-checkbox input {
+  width: auto;
+  margin-top: 4px;
+}
+
+.project-interest__submit {
+  display: block;
+  margin: 32px auto 0;
+  padding: 14px 32px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 700;
+  background: #222;
+  color: #fff;
+  transition: 0.2s ease;
+}
+
+.project-interest__submit:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+.project-interest__submit:disabled {
+  cursor: wait;
+  opacity: 0.6;
+}
+
+.project-interest__message {
+  margin: 20px 0 0;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 700px) {
+  .project-interest {
+    margin: 60px auto;
+    padding: 0 16px;
+  }
+
+  .project-interest__form {
+    padding: 22px;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-field--full {
+    grid-column: auto;
+  }
+}
+
+/*
+  Carrusel automático de logos (LogoBar): la lista se pinta dos veces
+  seguidas y se desliza -50% de su ancho total — como la segunda mitad es
+  una copia idéntica de la primera, el ciclo se ve continuo, sin salto al
+  reiniciar. La duración se controla desde el componente (inline style),
+  este bloque solo define el movimiento.
+*/
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation-name: marquee;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+/* Difumina los bordes izquierdo/derecho del carrusel para que los logos
+   no se corten de golpe al entrar/salir de la vista. */
+.marquee-fade {
+  -webkit-mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+  mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+}
+
+/* =========================================
+   SECCIÓN DE CONTACTO
+========================================= */
+
+.contact-section {
+  width: 100%;
+  padding: 20px 20px 70px;
+}
+
+
+/* =========================================
+   OPCIONES DE CONTACTO
+========================================= */
+
+.contact-options {
+  width: 100%;
+  max-width: 1000px;
+  margin: 45px auto 0;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+
+/* =========================================
+   TARJETAS
+========================================= */
+
+.contact-option {
+  min-height: 120px;
+  padding: 25px;
+
+  display: flex;
+  align-items: center;
+  gap: 18px;
+
+  background: #ffffff;
+  border: 1px solid #e5e5e5;
+  border-radius: 16px;
+
+  text-decoration: none;
+  color: #111111;
+
+  cursor: pointer;
+
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+
+/* Quita estilos propios del button */
+button.contact-option {
+  font-family: inherit;
+  text-align: left;
+}
+
+
+/* Hover */
+
+.contact-option:hover {
+  transform: translateY(-5px);
+
+  border-color: #c9c9c9;
+
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+
+/* =========================================
+   ICONOS
+========================================= */
+
+.contact-icon {
+  width: 55px;
+  height: 55px;
+
+  min-width: 55px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  font-size: 25px;
+  font-weight: 600;
+}
+
+
+/* WhatsApp */
+
+.whatsapp-icon {
+  background: #e8f8ee;
+  color: #25d366;
+}
+
+
+/* Correo */
+
+.email-icon {
+  background: #f5e9ee;
+  color: #8d153a;
+}
+
+
+/* Formulario */
+
+.form-icon {
+  background: #f1f1f1;
+  color: #333333;
+}
+
+
+/* =========================================
+   TEXTO
+========================================= */
+
+.contact-content {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+
+.contact-content h3 {
+  margin: 0;
+
+  font-size: 18px;
+  font-weight: 700;
+
+  color: #111111;
+}
+
+
+.contact-content p {
+  margin: 0;
+
+  font-size: 14px;
+  line-height: 1.4;
+
+  color: #666666;
+}
+
+
+/* =========================================
+   FORMULARIO ACTIVO
+========================================= */
+
+.contact-form-button.active {
+  border-color: #8d153a;
+
+  box-shadow:
+    0 8px 25px rgba(141, 21, 58, 0.15);
+}
+
+
+/* =========================================
+   CONTENEDOR DEL FORMULARIO
+========================================= */
+
+.contact-form-container {
+  width: 100%;
+  max-width: 900px;
+
+  margin: 35px auto 0;
+  padding: 30px;
+
+  background: #f8f8f8;
+
+  border: 1px solid #e3e3e3;
+  border-radius: 18px;
+
+  animation: contactFormAppear 0.3s ease;
+}
+
+
+@keyframes contactFormAppear {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 800px) {
+  .contact-options {
+    grid-template-columns: 1fr;
+    max-width: 600px;
+  }
+
+  .contact-option {
+    min-height: 100px;
+  }
+}
+
+
+/* =========================================
+   CELULAR
+========================================= */
+
+@media (max-width: 480px) {
+  .contact-section {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .contact-option {
+    padding: 20px;
+  }
+
+  .contact-icon {
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
+
+    font-size: 21px;
+  }
+
+  .contact-content h3 {
+    font-size: 16px;
+  }
+
+  .contact-content p {
+    font-size: 13px;
+  }
+
+  .contact-form-container {
+    padding: 20px;
+  }
+}

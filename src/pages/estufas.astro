@@ -1,0 +1,32 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import Header from "@/components/Header";
+import ImpactProgressSection from "@/components/Impacto";
+import { EstufasImpact, providers } from "@/data/content";
+import ProgramSolutions from "@/components/ProgramSolutions";
+import { estufasSolutions } from "@/data/content";
+import DataSection from "@/components/DataBlock";
+import Footer from "@/components/Footer";
+---
+
+<Layout title="Sedener">
+    <Header variant="solid" currentPath={Astro.url.pathname} client:load />
+    {
+        EstufasImpact.map((section) => (
+            <ImpactProgressSection data={section} client:visible />
+        ))
+    }
+    <ProgramSolutions
+        eyebrow="Tecnología y características"
+        title="Lo que hace posible este programa"
+        description="Conoce las principales soluciones y características que se consideran para que cada intervención sea útil, segura y adecuada a las necesidades de las comunidades."
+        solutions={estufasSolutions}
+        accent="orange"
+    />
+    {
+        providers.map((provider) => (
+            <DataSection data={[provider]} client:visible />
+        ))
+    }
+    <Footer />
+</Layout>

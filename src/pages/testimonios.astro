@@ -1,0 +1,33 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import Header from "@/components/Header";
+import { testimonialsPage } from "@/data/content";
+import TestimonialsVideoGallery from "@/components/TestimonioVideoGallery";
+import TestimonialAutoSlider from "@/components/TestimonioAutoSlider";
+import Footer from "@/components/Footer";
+---
+
+<Layout title="testimonios">
+    <Header variant="solid" currentPath={Astro.url.pathname} client:load />
+    <section class="container-page py-8">
+        <p class="text-sm font-semibold text-[#a50046]">
+            {testimonialsPage.eyebrow}
+        </p>
+        <h1
+            class="mt-2 font-display text-3xl font-extrabold text-brand-ink sm:text-4xl"
+        >
+            {testimonialsPage.title}
+        </h1>
+
+        <div class="mt-8">
+            <TestimonialsVideoGallery client:load />
+        </div>
+
+        <p class="mt-8 max-w-2xl text-brand-muted">{testimonialsPage.intro}</p>
+
+        <div class="mt-8">
+            <TestimonialAutoSlider client:visible />
+        </div>
+    </section>
+    <Footer />
+</Layout>

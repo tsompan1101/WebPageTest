@@ -1,0 +1,13 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import Header from "@/components/Header";
+import DonationSection from "@/components/donacion";
+import Footer from "@/components/Footer";
+---
+
+<Layout title="Sedener">
+    <Header variant="solid" currentPath={Astro.url.pathname} client:load />
+    <DonationSection client:visible />
+    <Footer />
+</Layout>
+
