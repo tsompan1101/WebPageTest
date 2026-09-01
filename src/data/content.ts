@@ -548,48 +548,93 @@ export const estufasTransferInfo: DonationTransferInfo = {
 
 export interface DonationItem {
   name: string;
-  description: string;
-  location: string;
+  description?: string;
 }
 
-export const electrificacionDonations: DonationItem[] = [
+export const donationTools: DonationItem[] = [
   {
-    name: 'Paneles solares',
-    description:
-      'Paneles fotovoltaicos nuevos o en buenas condiciones para sistemas de generación eléctrica.',
-    location: 'Centro de acopio / lugar de recepción',
+    name: 'Juego de llaves Allen',
   },
   {
-    name: 'Baterías',
-    description:
-      'Baterías compatibles con sistemas de almacenamiento de energía.',
-    location: 'Centro de acopio / lugar de recepción',
+    name: 'Juego de llaves tipo Torx',
   },
   {
-    name: 'Cableado eléctrico',
-    description:
-      'Cableado y conductores eléctricos adecuados para instalaciones fotovoltaicas.',
-    location: 'Centro de acopio / lugar de recepción',
+    name: 'Nivelador profesional',
   },
   {
-    name: 'Controladores de carga',
-    description:
-      'Controladores y equipos destinados a sistemas solares aislados.',
-    location: 'Centro de acopio / lugar de recepción',
+    name: 'Brújulas',
   },
   {
-    name: 'Inversores',
-    description:
-      'Inversores compatibles con sistemas de generación y almacenamiento de energía.',
-    location: 'Centro de acopio / lugar de recepción',
+    name: 'Flexómetros de 5 m',
   },
   {
-    name: 'Material eléctrico',
-    description:
-      'Interruptores, conectores, protecciones, cajas y otros materiales útiles para instalaciones eléctricas.',
-    location: 'Centro de acopio / lugar de recepción',
+    name: 'Comprobador de tensión',
+  },
+  {
+    name: 'Juego de herramientas aisladas',
+  },
+  {
+    name: 'Juego de desarmador tipo clemero/pinzas dieléctricas',
+  },
+  {
+    name: 'Juego de desarmadores dieléctricos',
   },
 ];
+
+export const donationEquipment: DonationItem[] = [
+  {
+    name: 'Lentes de seguridad con protección UV oscuros',
+  },
+  {
+    name: 'Cinta aislante color negro, blanco, verde o rojo',
+  },
+  {
+    name: 'Guantes dieléctricos de neopreno',
+  },
+  {
+    name: 'Guantes dieléctricos de carnaza',
+  },
+  {
+    name: 'Interruptor termomagnético 30 A, 2 polos',
+  },
+  {
+    name: 'Interruptor termomagnético 20 A, 2 polos',
+  },
+  {
+    name: 'Kit de protección lado CA: termomagnético y supresor de picos',
+  },
+  {
+    name: 'Kit de protección lado CD: termomagnético y supresor de picos',
+  },
+  {
+    name: 'Conductor desnudo o verde 12 AWG',
+  },
+  {
+    name: 'Cable fotovoltaico 10 AWG',
+  },
+  {
+    name: 'Conector conduit de ¾"',
+  },
+  {
+    name: 'MC4 par',
+  },
+  {
+    name: 'Conductor 12 AWG blanco',
+  },
+  {
+    name: 'Conductor 12 AWG negro',
+  },
+  {
+    name: 'Botiquín de emergencias',
+  },
+  {
+    name: 'Casco de seguridad con barbiquejo',
+  },
+  {
+    name: 'Chalecos de seguridad de alta visibilidad',
+  },
+];
+
 
 export const interestedTypes = [
   'Persona física',
