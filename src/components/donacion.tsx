@@ -1,41 +1,75 @@
-import { electrificacionDonations } from '../data/content';
+import {
+  donationTools,
+  donationEquipment,
+} from '@/data/content';
+
+
+interface DonationListProps {
+  title: string;
+  items: {
+    name: string;
+    description: string;
+  }[];
+}
+
+function DonationList({ title, items }: DonationListProps) {
+  return (
+    <div className="donation-category">
+      <div className="donation-category__header">
+        <h3>{title}</h3>
+        <span>{items.length} opciones</span>
+      </div>
+
+      <div className="donation-category__list">
+        {items.map((item, index) => (
+          <article
+            className="donation-item"
+            key={item.name}
+          >
+            <div className="donation-item__number">
+              {String(index + 1).padStart(2, '0')}
+            </div>
+
+            <div className="donation-item__content">
+              <h4>{item.name}</h4>
+              <p>{item.description}</p>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  );
+}
 
 export default function DonationSection() {
   return (
     <section className="donation-section">
       <div className="donation-header">
-        <span className="section-label">APOYA EL PROGRAMA</span>
+        <span className="section-label">
+          APOYA EL PROGRAMA
+        </span>
 
-        <h2>Materiales que puedes donar</h2>
+        <h2>Materiales y equipo que puedes donar</h2>
 
         <p>
-          Contribuye a llevar soluciones de electrificación a las comunidades
-          mediante la donación de materiales y equipos.
+          Tu donación puede contribuir a llevar soluciones de
+          electrificación a comunidades que lo necesitan.
+          Consulta los materiales y equipos que pueden ser
+          recibidos.
         </p>
       </div>
 
-      <div className="donation-list">
-        {electrificacionDonations.map((item) => (
-          <article className="donation-item" key={item.name}>
-            <div className="donation-icon">
-              ✓
-            </div>
+      <div className="donation-categories">
+        <DonationList
+          title="Herramientas"
+          items={donationTools}
+        />
 
-            <div className="donation-content">
-              <h3>{item.name}</h3>
-
-              <p>{item.description}</p>
-
-              <div className="donation-location">
-                <span>📍</span>
-                <strong>¿Dónde donarlo?</strong>
-                <span>{item.location}</span>
-              </div>
-            </div>
-          </article>
-        ))}
+        <DonationList
+          title="Equipo"
+          items={donationEquipment}
+        />
       </div>
     </section>
   );
 }
-
