@@ -59,7 +59,7 @@ export const contentBlocks = [
       'Es una franquicia energética con respaldo institucional, enfoque social y operación confiable para acercar combustibles de calidad a las regiones productivas de Tamaulipas. Es una opción de franquicia confiable, socialmente útil y operativamente viable, orientada a guiar, reducir costos en seguimiento de trámites y fortalecer la transparencia.',
     primaryCta: { label: 'Conocer las Gasolineras', href: '/gasolineras' },
     secondaryCta: { label: 'Conocer ubicación de las Gasolineras', href: 'https://sieet.tamaulipas.gob.mx/mapa' },
-    image: '/images/gasolineras.jpeg',
+    image: '/images/gaso1.jpeg',
     imageSide: 'right' as const,
   },
 ];
@@ -350,7 +350,7 @@ export const GasolinerasImpact = [
     title: 'Gasolineras del pueblo',
     eyebrow: '¿Cómo vamos?',
     description:
-      'Hasta la fecha se ha inagurado una Gasolineras del pueblo en el municipio de La Pesca, Tamaulipas.',
+      'Las Gasolineras del Pueblo tiene como objetivo el desarrollar una rede de estaciones de servicio de expendio público, con el valor agregado de mejorar el precio de venta, ampliar la cobertura de la calidad, tener una trazabilidad del combustible y asegurar litros de a litro. Dentro del estado se identifica 1 estación adquirida y 2 por construir por el Gobierno de Tamaulipas para entrar en operación en 2026; 3 municipios objetivos: Ciudad Victoria, Soto La Marina y Casas; y otros por definir para 2027. En el año 2026 se tiene establecido la apertura y entrada de operación de la primera Gasolinera del Pueblo en la localidad de la Pesca, en Soto La Marina, Tamaulipas.',
     statLabel: '400+ Personas Beneficiadas',
     // "current" y "total" definen el % de cada barra (current / total).
     progressBars: [
@@ -362,7 +362,7 @@ export const GasolinerasImpact = [
     linkHref: '/testimonios',
     secondaryCta: { label: '¡Participa!', href: '/formulario' },
     primaryCta: { label: 'Ubicar Gasolinera', href: 'https://sieet.tamaulipas.gob.mx/mapa' },
-    backgroundImage: '/images/impacto-gasolineras.jpg',
+    backgroundImage: '/images/impacto-gasolineras.jpeg',
   },
 ];
 
@@ -460,7 +460,7 @@ export const gasolinerasSolutions = [
       'Registro preliminar del interesado: nombre, empresa, correo, teléfono, municipio, tipo de proyecto y estatus del predio.',
       'Prevalidación documental: propiedad o posesión legal del terreno, ubicación georreferenciada, uso de suelo preliminar, RFC y personalidad jurídica.',
     ],
-    image: '/images/gaso1.jpg',
+    image: '/images/gaso3.jpeg',
     alt: 'Estufa eficiente de leña del programa',
   },
   {
@@ -476,7 +476,7 @@ export const gasolinerasSolutions = [
       'Acompañamiento y transición de marca',
       '',
     ],
-    image: '/images/gaso2.jpg',
+    image: '/images/gaso4.jpeg',
     alt: 'Estufa eficiente instalada en una vivienda',
   },
   {
@@ -495,7 +495,7 @@ export const gasolinerasSolutions = [
       'Herramientas digitales',
       'Control de calidad',
     ],
-    image: '/images/gaso3.jpg',
+    image: '/images/gaso5.jpeg',
     alt: 'Programa de estufas eficientes de leña',
   },
 ];
@@ -522,7 +522,7 @@ export const gasolinerasInfo= [
     description:
       'Gasolineras del Pueblo es un modelo de franquicia con identidad tamaulipeca, orientado a acercar combustibles de calidad, precios justos y atención confiable a las regiones productivas, turísticas y sociales del Estado de Tamaulipas. A través de una operación regulada, trazable y acompañada institucionalmente, el proyecto busca integrar a inversionistas y operadores que compartan una visión de servicio, cumplimiento y desarrollo regional soberano.',
     name: '',
-    image: '/images/logos/gasolineras.svg',
+    image: '/images/gaso2.jpeg',
   },
 ];
 
