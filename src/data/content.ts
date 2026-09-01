@@ -635,6 +635,15 @@ export const donationEquipment: DonationItem[] = [
   },
 ];
 
+export const donationLocation = {
+  address: ' México 70, 87138 Cdad. Victoria, Tamps.',
+  mapsUrl: 'https://maps.app.goo.gl/9YDpy6AYPxr2Exd67',
+};
+
+export const donationImages = {
+  herramientas: '/images/logos/pinzas.svg',
+  equipo: '/images/logos/equipo.svg',
+};
 
 export const interestedTypes = [
   'Persona física',
