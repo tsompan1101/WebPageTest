@@ -40,7 +40,7 @@ export default function ProgramSolutions({
         {solutions.map((solution) => (
           <article
             key={solution.title}
-            className="group overflow-hidden rounded-3xl border border-brand-ink/10 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl"
+            className="group flex flex-col overflow-hidden rounded-3xl border border-brand-ink/10 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl"
           >
             <div className="relative aspect-[16/10] overflow-hidden bg-brand-cream">
               <img
@@ -54,7 +54,7 @@ export default function ProgramSolutions({
               </span>
             </div>
 
-            <div className="p-6 bg-brand-cream">
+            <div className="flex flex-1 flex-col p-6 bg-brand-cream">
               <h3 className="font-display text-xl font-extrabold text-brand-ink">{solution.title}</h3>
               <p className="mt-3 text-sm leading-6 text-brand-muted">{solution.description}</p>
 
@@ -75,4 +75,3 @@ export default function ProgramSolutions({
     </section>
   );
 }
-
