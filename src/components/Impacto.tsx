@@ -1,3 +1,5 @@
+import FormattedText from '@/components/FormattedText';
+
 interface ProgressBarData {
   label: string;
   current: number;
@@ -45,7 +47,7 @@ function ImpactCardContent({ data }: { data: ImpactSectionData }) {
       </h3>
 
       {data.eyebrow && <p className="mt-4 text-sm font-bold text-brand-ink">{data.eyebrow}</p>}
-      <p className="mt-2 text-sm text-brand-muted">{data.description}</p>
+      <p className="mt-2 text-sm text-brand-ink"><FormattedText text={data.description} /></p>
       {data.title === 'Gasolineras del pueblo' ? null : (
         <p className="mt-5 flex items-center gap-2 text-sm font-bold text-brand-ink">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" className="shrink-0 text-brand-eco-green">
@@ -95,7 +97,7 @@ export default function ImpactProgressSection({ data }: { data: ImpactSectionDat
       */}
       <div className="overflow-hidden rounded-card bg-white shadow-sm sm:hidden">
         <img src={data.backgroundImage} alt="" className="aspect-[4/3] w-full object-cover" />
-        <div className="p-6">
+        <div className="p-6 text-justify">
           <ImpactCardContent data={data} />
           <div className="mt-6 flex flex-wrap gap-3">
             <a
@@ -123,12 +125,12 @@ export default function ImpactProgressSection({ data }: { data: ImpactSectionDat
           backgroundPosition: 'center',
         }}
       >
-        <div className="relative min-h-[520px]">
-          <div className="absolute left-8 top-8 z-10 max-w-md rounded-2xl bg-white/85 p-8 shadow-lg backdrop-blur-sm">
+        <div className="relative flex min-h-[520px] flex-col justify-between gap-6 p-8">
+          <div className="max-w-md rounded-2xl bg-white/85 p-8 text-justify shadow-lg backdrop-blur-sm">
             <ImpactCardContent data={data} />
           </div>
 
-          <div className="absolute bottom-8 left-8 z-10 flex flex-wrap gap-3">
+          <div className="flex flex-wrap gap-3">
             <a
               href={data.secondaryCta.href}
               className="inline-flex items-center justify-center rounded-full bg-white/95 px-5 py-2.5 text-sm font-semibold text-brand-ink shadow transition hover:bg-white"

@@ -27,7 +27,7 @@ export default function ProgramSolutions({
     : 'bg-brand-eco-green text-white';
 
   return (
-    <section className="container-page py-14 sm:py-20" aria-labelledby="program-solutions-title">
+    <section className="container-page py-14 sm:py-20" aria-labelledby="program-solutions-title"  id="solutions">
       <div className="mx-auto max-w-3xl text-center">
         <p className="text-sm font-bold uppercase tracking-[0.18em] text-brand-eco-green">{eyebrow}</p>
         <h2 id="program-solutions-title" className="mt-3 font-display text-3xl font-extrabold leading-tight text-brand-ink sm:text-4xl">
@@ -62,7 +62,7 @@ export default function ProgramSolutions({
                 {solution.benefits.map((benefit) => (
                   <li key={benefit} className="flex gap-2 text-sm text-brand-ink/80">
                     <span className="mt-1 flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-brand-eco-green/15 text-brand-eco-green" aria-hidden="true">
-                      ✓
+                      ○
                     </span>
                     <span>{benefit}</span>
                   </li>
