@@ -26,7 +26,7 @@ export const hero = {
   eyebrow: '',
   title:
     'Justicia social y soberanía energética para Tamaulipas.',
-  primaryCta: { label: 'Conoce más', href: '#logros' },
+  primaryCta: { label: 'Conoce más', href: '#programas' },
   secondaryCta: { label:'¡Súmate!', href: '/donaciones' },
   backgroundImage: '/images/hero-bg.jpeg',
 };
@@ -54,9 +54,9 @@ export const contentBlocks = [
   },
   {
     id: 'gasolineras',
-    title: 'Gasolineras del pueblo',
+    title: '¡Abasteciendo a Tamaulipas con justicia social!',
     body:
-      'Es una franquicia energética con respaldo institucional, enfoque social y operación confiable para acercar combustibles de calidad a las regiones productivas de Tamaulipas. Es una opción de franquicia confiable, socialmente útil y operativamente viable, orientada a guiar, reducir costos en seguimiento de trámites y fortalecer la transparencia.',
+      'Gracias al modelo de franquicia e innovación energética con respaldo institucional que transforma la distribución de combustibles en el estado. En Gasolineras del Pueblo llevamos energía de calidad, trazable y a precios justos a las regiones productivas y comunidades que más lo necesitan, garantizando una operación eficiente y transparente. Invitamos a inversionistas, aliados comerciales y municipios a formar parte de una red socialmente responsable que fortalece la economía de las familias y abandera el cambio energético en Tamaulipas.',
     primaryCta: { label: 'Conocer las Gasolineras', href: '/gasolineras' },
     secondaryCta: { label: 'Conocer ubicación de las Gasolineras', href: 'https://sieet.tamaulipas.gob.mx/mapa' },
     image: '/images/gaso1.jpeg',
@@ -306,7 +306,7 @@ export const ElectrificacionImpact = [
     title: 'Electrificación al 100%',
     eyebrow: '¿Cómo vamos?',
     description:
-      'Hasta la fecha se han instalado paneles solares en los municipios de Casas y Gustavo Díaz Ordaz con lo que se beneficiaron a un aproximado de 82 personas.',
+      'Cada sistema instalado representa un paso firme hacia la justicia social y la transformación energética de Tamaulipas. \n\nA la fecha, hemos llevado luz y dignidad a los municipios de **Casas** y **Gustavo Díaz Ordaz**, transformando la salud, el bienestar y la calidad de vida de familias que hoy cuentan con energía limpia, autónoma y eficiente en sus hogares.',
     statLabel: '82 Personas Beneficiadas',
     // "current" y "total" definen el % de cada barra (current / total).
     progressBars: [
@@ -316,7 +316,7 @@ export const ElectrificacionImpact = [
     question: '¿Cómo este proyecto a transformado las condiciones de vida de los tamaulipecos?',
     linkLabel: 'Testimonios de Familias',
     linkHref: '/testimonios',
-    secondaryCta: { label: '¿A dónde va el dinero?', href: '/pronto' },
+    secondaryCta: { label: '¿Cómo funciona?', href: '#solutions' },
     primaryCta: { label: '¡Súmate!', href: '/donaciones-paneles' },
     backgroundImage: '/images/impacto-electrificacion.jpg',
   },
@@ -328,7 +328,7 @@ export const EstufasImpact = [
     title: 'Estufas Eficientes',
     eyebrow: '¿Cómo vamos?',
     description:
-      'Hasta la fecha se han instalado estufas en los municipios de Casas, Gustavo Díaz Ordaz, Miquihuana, Abasolo, Jiménez, Gónzalez, Soto la Marina y en Victoria con lo que se beneficiaron alrededor de 400+ personas.',
+      'Con el programa de Estufas Eficientes buscamos brindar dignidad los hogares de nuestras comunidades y combatir la pobreza energética. \n\nA la fecha, hemos sustituido fogones tradicionales en los municipios de **Casas**, **Gustavo Díaz Ordaz**, **Miquihuana**, **Abasolo**, **Jiménez**, **González**, **Soto la Marina** y **Victoria**, eliminando el humo en el interior de las viviendas para proteger la salud pulmonar de **más** de **400 personas** y logrando un uso mucho más eficiente de la energía térmica.',
     statLabel: '400+ Personas Beneficiadas',
     // "current" y "total" definen el % de cada barra (current / total).
     progressBars: [
@@ -350,7 +350,7 @@ export const GasolinerasImpact = [
     title: 'Gasolineras del pueblo',
     eyebrow: '¿Cómo vamos?',
     description:
-      'Las Gasolineras del Pueblo tiene como objetivo el desarrollar una rede de estaciones de servicio de expendio público, con el valor agregado de mejorar el precio de venta, ampliar la cobertura de la calidad, tener una trazabilidad del combustible y asegurar litros de a litro. Dentro del estado se identifica 1 estación adquirida y 2 por construir por el Gobierno de Tamaulipas para entrar en operación en 2026; 3 municipios objetivos: Ciudad Victoria, Soto La Marina y Casas; y otros por definir para 2027. En el año 2026 se tiene establecido la apertura y entrada de operación de la primera Gasolinera del Pueblo en la localidad de la Pesca, en Soto La Marina, Tamaulipas.',
+      'Bajo el liderazgo de la Secretaría de Desarrollo Energético, nace la franquicia Gasolineras del Pueblo, una red de estaciones diseñada para transformar el mercado a través de la honestidad y el valor agregado.\n \nAl unirte a nuestra red, tu empresa ofrecerá a los tamaulipecos precios más competitivos, una cobertura de calidad superior, trazabilidad garantizada del combustible y la certeza inquebrantable de recibir "litros de a litro".\n \n Nuestro crecimiento ya es una realidad. Este 2026, el Gobierno de Tamaulipas pondrá en marcha las primeras tres estaciones de la red (una adquirida y dos de nueva creación), comenzando con la histórica apertura de nuestra sucursal insignia en La Pesca, Soto La Marina.',
     statLabel: '400+ Personas Beneficiadas',
     // "current" y "total" definen el % de cada barra (current / total).
     progressBars: [
@@ -371,7 +371,7 @@ export const electrificacionSolutions = [
     title: 'Sistema fotovoltaico aislado',
     category: 'Generación solar',
     description:
-      'Conjunto diseñado para producir electricidad en viviendas que no cuentan con conexión a la red eléctrica convencional.',
+      'Solución de generación diseñada para llevar electricidad autónoma y de alta eficiencia a viviendas en comunidades vulnerables sin conexión a la red eléctrica.',
     benefits: [
       'Aprovecha la radiación solar disponible en la comunidad.',
       'Permite electrificar viviendas alejadas de la red.',
@@ -388,7 +388,7 @@ export const electrificacionSolutions = [
     benefits: [
       'Disponibilidad de energía durante la noche.',
       'Mejor aprovechamiento de la generación solar.',
-      'Ayuda a mantener un suministro estable para cargas esenciales.',
+      'Ayuda a dar un suministro estable para cargas esenciales.',
     ],
     image: '/images/electrificacion.jpeg',
     alt: 'Sistema de electrificación solar para una vivienda',
@@ -397,7 +397,7 @@ export const electrificacionSolutions = [
     title: 'Instalación y seguridad',
     category: 'Implementación',
     description:
-      'La selección, instalación y protección correcta de los componentes es clave para que cada sistema funcione de forma segura y confiable.',
+      'Se hace un implementación técnica normada y profesional que garantiza el funcionamiento seguro, confiable y duradero de cada componente del sistema.',
     benefits: [
       'Dimensionamiento de acuerdo con las necesidades de la vivienda.',
       'Protecciones eléctricas y cableado adecuados.',
@@ -455,10 +455,10 @@ export const gasolinerasSolutions = [
     title: '¡Quiero desarrollar una nueva estación!',
     category: 'Documentación',
     description:
-      'Los requisitos son.',
+      'Inicia tu proyecto con el respaldo institucional del Estado para expandir la red de abasto eficiente, seguro y de precio justo en las regiones productivas de Tamaulipas.',
     benefits: [
-      'Registro preliminar del interesado: nombre, empresa, correo, teléfono, municipio, tipo de proyecto y estatus del predio.',
-      'Prevalidación documental: propiedad o posesión legal del terreno, ubicación georreferenciada, uso de suelo preliminar, RFC y personalidad jurídica.',
+      'Registro preliminar ágil: Proceso sencillo para capturar los datos esenciales del inversionista o desarrollador, empresa, ubicación municipal y estatus del predio.',
+      'Prevalidación documental integral: Acompañamiento técnico y legal en la revisión de propiedad del terreno, georreferenciación, uso de suelo preliminar, RFC y personalidad jurídica.',
     ],
     image: '/images/gaso3.jpeg',
     alt: 'Estufa eficiente de leña del programa',
@@ -469,12 +469,9 @@ export const gasolinerasSolutions = [
     description:
       'Si ya cuentas con una estación en operación, incorpórala a la red del programa para sumar esfuerzos en la garantía de la justicia social y el desarrollo sustentable de las comunidades.',
     benefits: [
-      'Cambio de imagen.',
-      'Condición de adhesión.',
-      'Estandares Operativos.',
-      'Suministro',
-      'Acompañamiento y transición de marca',
-      '',
+      'Renovación e imagen corporativa: Transición de marca acompañada institucionalmente con condiciones de adhesión transparentes',
+      'Garantía de suministro y eficiencia: Estándares operativos de alta calidad y certidumbre en el abasto continuo de combustible trazable.',
+      'Acompañamiento continuo: Asesoría técnica y legal permanente durante todo el proceso de integración a la red estatal.',
     ],
     image: '/images/gaso4.jpeg',
     alt: 'Estufa eficiente instalada en una vivienda',
@@ -483,17 +480,11 @@ export const gasolinerasSolutions = [
     title: '¡Conoce tus Beneficios!',
     category: 'Seguridad',
     description:
-      'Al formar parte de las gasolineras del pueblo, contaria con los siguientes beneficios',
+      'Formar parte de las Gasolineras del Pueblo potencia la competitividad y certidumbre de tu negocio, respaldado por una visión de servicio y compromiso social.',
     benefits: [
-      'Reconocimiento de marca.',
-      'Acompañamiento técnico',
-      'Imagen corporativa',
-      'Suministro',
-      'Capacitación',
-      'Estándares de servicio',
-      'Apoyo comercial',
-      'Herramientas digitales',
-      'Control de calidad',
+      'Identidad y posicionamiento: Reconocimiento de marca e imagen corporativa sólida y cercana a la comunidad.',
+      'Excelencia en el servicio: Acompañamiento técnico, capacitación constante del personal y estándares operativos de primer nivel.',
+      'Tecnología y control: Suministro garantizado, riguroso control de calidad (litros de a litro) y herramientas digitales de gestión.',
     ],
     image: '/images/gaso5.jpeg',
     alt: 'Programa de estufas eficientes de leña',
