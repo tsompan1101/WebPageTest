@@ -61,13 +61,6 @@ function ImpactCardContent({ data }: { data: ImpactSectionData }) {
           {data.statLabel}
         </p>
       )}
-      {data.title === 'Gasolineras del pueblo' ? null : (
-        <div className="mt-4 space-y-4">
-          {data.progressBars.map((bar) => (
-            <ProgressBar key={bar.label} {...bar} />
-          ))}
-        </div>
-      )}
 
       {data.title === 'Gasolineras del pueblo' ? null : (
         <p className="mt-5 text-sm text-brand-muted">
