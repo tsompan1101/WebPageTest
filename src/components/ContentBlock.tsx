@@ -56,8 +56,8 @@ export default function ContentBlock({
                 <a
                   href={secondaryCta.href}
                   className={
-                    title === 'Gasolineras del pueblo'
-                      ? 'btn-secondary'
+                    title === '¡Abasteciendo a Tamaulipas con justicia social!'
+                      ? 'btn-secondary bg-brand-cream'
                       : 'btn-default disabled:opacity-50'
                   }
                 >
