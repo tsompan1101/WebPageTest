@@ -58,7 +58,7 @@ export const contentBlocks = [
     body:
       'Gracias al modelo de franquicia e innovación energética con respaldo institucional que transforma la distribución de combustibles en el estado. En Gasolineras del Pueblo llevamos energía de calidad, trazable y a precios justos a las regiones productivas y comunidades que más lo necesitan, garantizando una operación eficiente y transparente. Invitamos a inversionistas, aliados comerciales y municipios a formar parte de una red socialmente responsable que fortalece la economía de las familias y abandera el cambio energético en Tamaulipas.',
     primaryCta: { label: 'Conocer las Gasolineras', href: '/gasolineras' },
-    secondaryCta: { label: 'Conocer ubicación de las Gasolineras', href: 'https://sieet.tamaulipas.gob.mx/mapa' },
+    secondaryCta: { label: 'Conocer ubicación de las Gasolineras', href: 'https://sieet.tamaulipas.gob.mx/mapa?lat=24.527891&lng=-97.622541&zoom=6.55&layers=estaciones_servicio_petroliferos' },
     image: '/images/gaso1.jpeg',
     imageSide: 'right' as const,
   },
@@ -195,7 +195,7 @@ export const footer = {
     { label: 'Testimonios', href: '/testimonios' },
     { label: 'Conócenos', href: '/conocenos' },
     { label: 'Inicio', href: '/' },
-    { label: 'Causa Social', href: '/pronto' },
+    { label: 'Causa Social', href: '/#programas' },
   ],
   redirectIcon: '/images/logos/redirect.svg',
   contact: {
@@ -361,7 +361,7 @@ export const GasolinerasImpact = [
     linkLabel: 'Testimonios de Familias',
     linkHref: '/testimonios',
     secondaryCta: { label: '¡Participa!', href: '/formulario' },
-    primaryCta: { label: 'Ubicar Gasolinera', href: 'https://sieet.tamaulipas.gob.mx/mapa' },
+    primaryCta: { label: 'Ubicar Gasolinera', href: 'https://sieet.tamaulipas.gob.mx/mapa?lat=24.527891&lng=-97.622541&zoom=6.55&layers=estaciones_servicio_petroliferos' },
     backgroundImage: '/images/impacto-gasolineras.jpeg',
   },
 ];
