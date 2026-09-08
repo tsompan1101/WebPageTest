@@ -199,7 +199,7 @@ export const footer = {
   ],
   redirectIcon: '/images/logos/redirect.svg',
   contact: {
-    email: 'info@tamaulipas.gob.mx',
+    email: 'sedener@tamaulipas.gob.mx',
     emailIcon: '/images/logos/mail.svg',
     phone: '+52 (834) 318 8000 Ext. 58175',
 
@@ -705,7 +705,7 @@ export const contacto = {
   h2: '¡Se parte de Gasolineras del Pueblo!',
   description: 'Contactanos o llena el formulario y conviertete en el cambio que la comunidad necesita.',
   Number: '528343188000,58175',
-  mailto: 'correo@ejemplo.gob.mx',
+  mailto: 'sedener@tamaulipas.gob.mx',
 };
 
 export const formData = {
