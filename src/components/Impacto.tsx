@@ -1,4 +1,7 @@
+import { useEffect, useState } from 'react';
+import { footer } from '@/data/content';
 import FormattedText from '@/components/FormattedText';
+
 
 interface ProgressBarData {
   label: string;
@@ -16,7 +19,10 @@ interface ImpactSectionData {
   linkLabel: string;
   linkHref: string;
   secondaryCta: { label: string; href: string };
-  primaryCta: { label: string; href: string };
+  // "action: 'contact'" hace que el botón abra el popup con correo/teléfono
+  // en vez de navegar a "href" (href se ignora en ese caso, pero puedes
+  // dejarlo como '#' de todas formas).
+  primaryCta: { label: string; href: string; action?: 'contact' };
   backgroundImage: string;
 }
 
@@ -47,7 +53,7 @@ function ImpactCardContent({ data }: { data: ImpactSectionData }) {
       </h3>
 
       {data.eyebrow && <p className="mt-4 text-sm font-bold text-brand-ink">{data.eyebrow}</p>}
-      <p className="mt-2 text-sm text-brand-ink"><FormattedText text={data.description} /></p>
+      <p className="mt-2 text-sm text-brand"><FormattedText text={data.description} /></p>
       {data.title === 'Gasolineras del pueblo' ? null : (
         <p className="mt-5 flex items-center gap-2 text-sm font-bold text-brand-ink">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" className="shrink-0 text-brand-eco-green">
@@ -80,7 +86,106 @@ function ImpactCardContent({ data }: { data: ImpactSectionData }) {
   );
 }
 
+/*
+  Popup con correo y teléfono. Se cierra con Escape, con click en el fondo,
+  o con el botón ✕. Toma los datos de footer.contact en content.ts, así
+  que si cambias ese correo/teléfono, este popup se actualiza solo.
+*/
+function ContactModal({ open, onClose }: { open: boolean; onClose: () => void }) {
+  useEffect(() => {
+    if (!open) return;
+    function handleKey(e: KeyboardEvent) {
+      if (e.key === 'Escape') onClose();
+    }
+    document.addEventListener('keydown', handleKey);
+    return () => document.removeEventListener('keydown', handleKey);
+  }, [open, onClose]);
+
+  if (!open) return null;
+
+  return (
+    <div
+      className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 p-4"
+      onClick={onClose}
+      role="presentation"
+    >
+      <div
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="contact-modal-title"
+        onClick={(e) => e.stopPropagation()}
+        className="w-full max-w-sm rounded-2xl bg-white p-6 shadow-xl sm:p-8"
+      >
+        <div className="flex items-start justify-between gap-4">
+          <h3 id="contact-modal-title" className="font-display text-xl font-extrabold text-brand-ink">
+            Contáctanos
+          </h3>
+          <button
+            type="button"
+            onClick={onClose}
+            aria-label="Cerrar"
+            className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-brand-ink/60 transition hover:bg-brand-cream hover:text-brand-ink"
+          >
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <path strokeLinecap="round" d="M6 6l12 12M18 6L6 18" />
+            </svg>
+          </button>
+        </div>
+
+        <p className="mt-2 text-sm text-brand-muted">
+          Escríbenos para donar o para sumarte al equipo — con gusto te contestamos.
+        </p>
+
+        <div className="mt-6 flex flex-col gap-3">
+          <a
+            href={`mailto:${footer.contact.email}`}
+            className="flex items-center gap-3 rounded-xl border border-brand-ink/10 px-4 py-3 text-sm font-semibold text-brand-ink transition hover:bg-brand-cream"
+          >
+            <img
+              src={footer.contact.emailIcon}
+              alt=""
+              aria-hidden="true"
+              className="h-5 w-5 shrink-0 opacity-70"
+            />
+            {footer.contact.email}
+          </a>
+          <a
+            href={`tel:${footer.contact.phone}`}
+            className="flex items-center gap-3 rounded-xl border border-brand-ink/10 px-4 py-3 text-sm font-semibold text-brand-ink transition hover:bg-brand-cream"
+          >
+            <img
+              src={footer.contact.phoneIcon}
+              alt=""
+              aria-hidden="true"
+              className="h-5 w-5 shrink-0 opacity-70"
+            />
+            {footer.contact.phone}
+          </a>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export default function ImpactProgressSection({ data }: { data: ImpactSectionData }) {
+  const [contactOpen, setContactOpen] = useState(false);
+
+  // Un solo botón que sirve tanto para el bloque de móvil como el de
+  // escritorio, para no repetir la condición dos veces.
+  const primaryCtaButton = (
+    <>
+      {data.primaryCta.action === 'contact' ? (
+        <button type="button" onClick={() => setContactOpen(true)} className="btn-primary">
+          {data.primaryCta.label}
+        </button>
+      ) : (
+        <a href={data.primaryCta.href} className="btn-primary">
+          {data.primaryCta.label}
+        </a>
+      )}
+    </>
+  );
+
   return (
     <section id="impacto" className="container-page py-12">
       {/*
@@ -99,9 +204,7 @@ export default function ImpactProgressSection({ data }: { data: ImpactSectionDat
             >
               {data.secondaryCta.label}
             </a>
-            <a href={data.primaryCta.href} className="btn-primary">
-              {data.primaryCta.label}
-            </a>
+            {primaryCtaButton}
           </div>
         </div>
       </div>
@@ -130,12 +233,12 @@ export default function ImpactProgressSection({ data }: { data: ImpactSectionDat
             >
               {data.secondaryCta.label}
             </a>
-            <a href={data.primaryCta.href} className="btn-primary">
-              {data.primaryCta.label}
-            </a>
+            {primaryCtaButton}
           </div>
         </div>
       </div>
+
+      <ContactModal open={contactOpen} onClose={() => setContactOpen(false)} />
     </section>
   );
 }

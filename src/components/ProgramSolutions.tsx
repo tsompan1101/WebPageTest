@@ -1,4 +1,3 @@
-
 export interface ProgramSolution {
   title: string;
   category: string;
@@ -23,12 +22,10 @@ export default function ProgramSolutions({
   solutions,
   accent = 'green',
 }: ProgramSolutionsProps) {
-  const accentClasses = accent === 'orange'
-    ? 'bg-brand-orange text-white'
-    : 'bg-brand-eco-green text-white';
-
-  // Título que tendrá el botón
-  const specialTitle = '¡Quiero desarrollar una nueva estación!';
+  const accentColor =
+    accent === 'orange'
+      ? 'text-brand-orange'
+      : 'text-brand-eco-green';
 
   return (
     <section
@@ -36,14 +33,17 @@ export default function ProgramSolutions({
       aria-labelledby="program-solutions-title"
       id="solutions"
     >
-      <div className="mx-auto max-w-3xl text-center">
-        <p className="text-sm font-bold uppercase tracking-[0.18em] text-brand-eco-green">
+      {/* Encabezado */}
+      <div className="mx-auto max-w-4xl text-center">
+        <p
+          className={`text-sm font-bold uppercase tracking-[0.18em] ${accentColor}`}
+        >
           {eyebrow}
         </p>
 
         <h2
           id="program-solutions-title"
-          className="mt-3 font-display text-3xl font-extrabold leading-tight text-brand-ink sm:text-4xl"
+          className="mt-3 font-display text-3xl font-extrabold leading-tight text-brand-ink sm:text-4xl lg:text-5xl"
         >
           {title}
         </h2>
@@ -53,69 +53,79 @@ export default function ProgramSolutions({
         </p>
       </div>
 
-      <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-        {solutions.map((solution) => {
-          const isSpecial = solution.title === specialTitle;
-
-          return (
-            <article
-              key={solution.title}
-              className="group flex flex-col overflow-hidden rounded-3xl border border-brand-ink/10 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl"
+      {/* Soluciones */}
+      <div className="mx-auto mt-14 max-w-6xl space-y-20 lg:space-y-24">
+        {solutions.map((solution, index) => (
+          <article
+            key={solution.title}
+            className="grid items-center gap-8 md:grid-cols-2 md:gap-14 lg:gap-20"
+          >
+            {/* Imagen */}
+            <div
+              className={`flex justify-center ${
+                index % 2 !== 0 ? 'md:order-2' : ''
+              }`}
             >
-              <div className="relative aspect-[16/10] overflow-hidden bg-brand-cream">
+              <div className="relative w-auto max-w-md">
                 <img
                   src={solution.image}
                   alt={solution.alt}
                   loading="lazy"
-                  className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+                  className="mx-auto h-auto max-h-[360px] w-full rounded-2xl object-cover"
                 />
 
+                {/* Número */}
                 <span
-                  className={`absolute left-4 top-4 rounded-full px-3 py-1 text-xs font-bold shadow-sm ${accentClasses}`}
+                  className={`absolute -bottom-4 left-4 flex h-12 w-12 items-center justify-center rounded-full bg-white font-display text-xl font-extrabold shadow-md ${accentColor}`}
                 >
-                  {solution.category}
+                  {index + 1}
                 </span>
               </div>
+            </div>
 
-              <div className="flex flex-1 flex-col bg-brand-cream p-6">
-                <h3 className="font-display text-xl font-extrabold text-brand-ink">
-                  {solution.title}
-                </h3>
+            {/* Información */}
+            <div
+              className={`${
+                index % 2 !== 0 ? 'md:order-1' : ''
+              }`}
+            >
+              <p
+                className={`text-sm font-bold uppercase tracking-[0.14em] ${accentColor}`}
+              >
+                {solution.category}
+              </p>
 
-                <p className="mt-3 text-sm leading-6 text-brand-muted">
-                  {solution.description}
-                </p>
+              <h3 className="mt-2 font-display text-2xl font-extrabold leading-tight text-brand-ink sm:text-3xl">
+                {solution.title}
+              </h3>
 
-                {isSpecial ? (
-                  <a
-                    href="mailto:sedener@tamaulipas.gob.mx"
-                    className="mt-10 block w-full rounded-xl bg-brand-orange px-5 py-9 text-center font-bold text-white transition hover:scale-[1.02] hover:bg-brand-orange/90"
+              <p className="mt-4 text-base leading-7 text-brand-muted text-justify">
+                {solution.description}
+              </p>
+
+              {/* Bullets */}
+              <ul className="mt-6 space-y-3">
+                {solution.benefits.map((benefit) => (
+                  <li
+                    key={benefit}
+                    className="flex items-start gap-3 text-sm leading-6 text-brand-ink/80 sm:text-base"
                   >
-                    Contactar
-                  </a>
-                ) : (
-                  <ul className="mt-5 space-y-2.5">
-                    {solution.benefits.map((benefit) => (
-                      <li
-                        key={benefit}
-                        className="flex gap-2 text-sm text-brand-ink/80"
-                      >
-                        <span
-                          className="mt-1 flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-brand-eco-green/15 text-brand-eco-green"
-                          aria-hidden="true"
-                        >
-                          ○
-                        </span>
+                    <span
+                      className={`mt-2 h-2 w-2 shrink-0 rounded-full ${
+                        accent === 'orange'
+                          ? 'bg-brand-orange'
+                          : 'bg-brand-eco-green'
+                      }`}
+                      aria-hidden="true"
+                    />
 
-                        <span>{benefit}</span>
-                      </li>
-                    ))}
-                  </ul>
-                )}
-              </div>
-            </article>
-          );
-        })}
+                    <span>{benefit}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </article>
+        ))}
       </div>
     </section>
   );
