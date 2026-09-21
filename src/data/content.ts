@@ -25,8 +25,8 @@ export const siteNav = {
 export const hero = {
   eyebrow: '',
   title:
-    'Justicia social y soberanía energética para Tamaulipas.',
-  primaryCta: { label: 'Conoce más', href: '#programas' },
+    'Justicia Energética para Tamaulipas.',
+  primaryCta: { label: 'Conoce  los proyectos', href: '#programas' },
   secondaryCta: { label:'¡Súmate!', href: '/donaciones' },
   backgroundImage: '/images/hero-bg.jpeg',
 };
@@ -37,17 +37,17 @@ export const contentBlocks = [
     title: '¡Electrificando Tamaulipas!',
     body:
       'Como un acto fundamental de justicia social para reducir la brecha de desigualdad en el estado, impulsamos el programa de Electrificación al 100%. Llevamos energía a donde antes no la había, garantizando a las familias vulnerables el acceso a sistemas fotovoltaicos autónomos y eficientes que transforman la calidad de vida y protegen la salud en sus hogares.',
-    primaryCta: { label: 'Conocer el proyecto', href: '/electrificacion' },
+    primaryCta: { label: 'Conoce el proyecto', href: '/electrificacion' },
     secondaryCta: { label: '', href: '/donaciones' },
     image: '/images/electrificacion.jpeg',
     imageSide: 'right' as const,
   },
   {
     id: 'estufas',
-    title: 'Estufas Eficientes y dignas para el servicio del pueblo ',
+    title: 'Estufas Eficientes para el servicio del pueblo ',
     body:
-      'Destinadas a reducir la demanda de leña y mitigar las emisiones contaminantes al interior de la vivienda. Esta estrategia integral busca garantizar el derecho a la salud de las comunidades, disminuir la pobreza energética y promover un desarrollo sustentable con bienestar social.',
-    primaryCta: { label: 'Conocer el proyecto', href: '/estufas' },
+      'Trabajamos para aumentar la justicia social y promover un desarrollo sustentable con bienestar social, impulsando tecnologías de alta eficiencia mediante estufas eficientes de leña adecuadas para el pueblo y las familias tamaulipecas, con el propósito de optimizar el consumo de recursos y proteger el derecho fundamental a la salud en cada comunidad.',
+    primaryCta: { label: 'Conoce el proyecto', href: '/estufas' },
     secondaryCta: { label: '', href: '' },
     image: '/images/estufas.jpeg',
     imageSide: 'left' as const,
@@ -56,8 +56,8 @@ export const contentBlocks = [
     id: 'gasolineras',
     title: '¡Abasteciendo a Tamaulipas con justicia social!',
     body:
-      'Gracias al modelo de franquicia e innovación energética con respaldo institucional que transforma la distribución de combustibles en el estado. En Gasolineras del Pueblo llevamos energía de calidad, trazable y a precios justos a las regiones productivas y comunidades que más lo necesitan, garantizando una operación eficiente y transparente. Invitamos a inversionistas, aliados comerciales y municipios a formar parte de una red socialmente responsable que fortalece la economía de las familias y abandera el cambio energético en Tamaulipas.',
-    primaryCta: { label: 'Conocer las Gasolineras', href: '/gasolineras' },
+      'Conoce un modelo para abastecer combustible generando mayor beneficio económico y mejora en la economía local. A través de este esquema, buscamos impulsar a los sectores productivos y modernizar la distribución de los energéticos para que cada litro fortalezca el ingreso de las familias, garantizando un acceso más equitativo, precios justos y un desarrollo que verdaderamente se quede en las manos de nuestra gente.',
+    primaryCta: { label: 'Sumate a este modelo', href: '/gasolineras' },
     secondaryCta: { label: 'Conocer ubicación de las Gasolineras', href: 'https://sieet.tamaulipas.gob.mx/mapa?lat=24.527891&lng=-97.622541&zoom=6.55&layers=estaciones_servicio_petroliferos' },
     image: '/images/gaso1.jpeg',
     imageSide: 'right' as const,
@@ -119,7 +119,7 @@ export const sdg = {
       image: '/images/ods/slide7.jpg',
       title: ' Acción por el Clima',
       body:
-        'Reduce la emisión de gases de efecto invernadero (como CO2) y hollín, contribuyendo directamente a la mitigación del cambio climático.',
+        'Reduce la emisión de gases de efecto invernadero (como CO2, Metanol, PM2.5) y hollín, contribuyendo directamente a la mitigación del cambio climático.',
       goals: [ ],
       icon: '/images/ods/13.jpg',
     },
@@ -304,20 +304,20 @@ export const ElectrificacionImpact = [
   {
     id: 'electrificacion-impacto',
     title: 'Electrificación al 100%',
-    eyebrow: '¿Cómo vamos?',
+    eyebrow: '¡Tenemos un reto!',
     description:
-      'Cada sistema instalado representa un paso firme hacia la justicia social y la transformación energética de Tamaulipas. \n\nA la fecha, hemos llevado luz y dignidad a los municipios de **Casas** y **Gustavo Díaz Ordaz**, transformando la salud, el bienestar y la calidad de vida de familias que hoy cuentan con energía limpia, autónoma y eficiente en sus hogares.',
-    statLabel: '82 Personas Beneficiadas',
+      'Electrificar los 43 municipios. En Tamaulipas el **99%** de la población cuenta con interconexion eléctrica pero faltan familias que no cuentan con acceso a la red eléctrica. \n\nEsta propuesta busca superar esa condicion con sistemas fotovoltaicos y completar la electrificacion con el 100%, beneficiando a **+2,000 familias**.',
+    statLabel: '82 Familias Beneficiadas',
     // "current" y "total" definen el % de cada barra (current / total).
     progressBars: [
       { label: '40 paneles recaudados de 1,000', current: 40, total: 1000 },
       { label: '2 municipios beneficiados de nuestro objetivo 43', current: 2, total: 43 },
     ],
-    question: '¿Cómo este proyecto a transformado las condiciones de vida de los tamaulipecos?',
-    linkLabel: 'Testimonios de Familias',
+    question: '¡Conoce como es que sumamos en pro de la Justicia Social!',
+    linkLabel: 'Acompañanos a Electrificar Tamaulipas',
     linkHref: '/testimonios',
     secondaryCta: { label: '¿Cómo funciona?', href: '#solutions' },
-    primaryCta: { label: '¡Súmate!', href: '/donaciones-paneles' },
+    primaryCta: { label: 'Hagamoslo Posible Juntos', href: '/donaciones-paneles' },
     backgroundImage: '/images/impacto-electrificacion.jpg',
   },
 ];
@@ -328,18 +328,18 @@ export const EstufasImpact = [
     title: 'Estufas Eficientes',
     eyebrow: '¿Cómo vamos?',
     description:
-      'Con el programa de Estufas Eficientes buscamos brindar dignidad los hogares de nuestras comunidades y combatir la pobreza energética. \n\nA la fecha, hemos sustituido fogones tradicionales en los municipios de **Casas**, **Gustavo Díaz Ordaz**, **Miquihuana**, **Abasolo**, **Jiménez**, **González**, **Soto la Marina** y **Victoria**, eliminando el humo en el interior de las viviendas para proteger la salud pulmonar de **más** de **400 personas** y logrando un uso mucho más eficiente de la energía térmica.',
+      'Con el programa de Estufas Eficientes buscamos brindar  los hogares de nuestras comunidades y combatir la pobreza energética. \n\nA la fecha, hemos sustituido fogones tradicionales en los municipios de **Casas**, **Gustavo Díaz Ordaz**, **Miquihuana**, **Abasolo**, **Jiménez**, **González**, **Soto la Marina** y **Victoria**, eliminando el humo en el interior de las viviendas para proteger la salud pulmonar de **más** de **400 personas** y logrando un uso mucho más eficiente de la energía térmica.',
     statLabel: '400+ Personas Beneficiadas',
     // "current" y "total" definen el % de cada barra (current / total).
     progressBars: [
       { label: '66 estufas recaudados de 1,000', current: 66, total: 1000 },
       { label: '8 municipios beneficiados de nuestro objetivo 43', current: 8, total: 43 },
     ],
-    question: '¿Cómo este proyecto a transformado las condiciones de vida de los tamaulipecos?',
-    linkLabel: 'Testimonios de Familias',
+    question: '¡Conoce como es que sumamos en pro de la Justicia Social!',
+    linkLabel: 'Escucha el testimonios de las Familias Beneficiadas',
     linkHref: '/testimonios',
     secondaryCta: { label: '¿A dónde va el dinero?', href: '#proveedores' },
-    primaryCta: { label: '¡Súmate!', href: '/donaciones-estufas' },
+    primaryCta: { label: '¡Dona o Trabaja con Nosotros!', href: '#', action: 'contact' },
     backgroundImage: '/images/impacto-estufas.jpg',
   },
 ];
@@ -366,45 +366,74 @@ export const GasolinerasImpact = [
   },
 ];
 
+export const panelEspecificaciones = [
+  {
+    title: 'Panel solar de 630 watts',
+    category: 'Paneles',
+    description:
+      'Panel Solar con construcción de doble vidrio (Glass-Glass), eficiencia mínima del 21 % y tolerancia de potencia de 0 a +5 W. El módulo deberá contar con:',
+    benefits: [
+      'Marco de aluminio anodizado resistente a la corrosión.',
+      'Vidrio templado de alta resistencia en ambas caras y estar diseñado para operar en condiciones ambientales exteriores.',
+      'Resistencia a la degradación inducida por potencial (PID), humedad y niebla salina',
+    ],
+    image: '/images/panelEspecificado.png',
+    alt: 'Estufa eficiente de leña del programa',
+  },
+];
+
 export const electrificacionSolutions = [
   {
     title: 'Sistema fotovoltaico aislado',
     category: 'Generación solar',
     description:
-      'Solución de generación diseñada para llevar electricidad autónoma y de alta eficiencia a viviendas en comunidades vulnerables sin conexión a la red eléctrica.',
+      'Se usan Paneles fotovoltaicos para brindar electricidad a comunidades sin conexión a la red eléctrica.',
     benefits: [
       'Aprovecha la radiación solar disponible en la comunidad.',
       'Permite electrificar viviendas alejadas de la red.',
       'Requiere mantenimiento periódico y sencillo.',
     ],
-    image: '/images/impacto-electrificacion.jpg',
+    image: '/images/panelFV.png',
     alt: 'Instalación de electrificación mediante energía solar',
   },
   {
     title: 'Almacenamiento de energía',
     category: 'Continuidad',
     description:
-      'Las baterías permiten conservar la energía generada durante el día para utilizarla cuando no hay radiación solar.',
+      'Las baterías permiten conservar la energía generada durante el día para utilizarla durante la noche.',
     benefits: [
       'Disponibilidad de energía durante la noche.',
       'Mejor aprovechamiento de la generación solar.',
       'Ayuda a dar un suministro estable para cargas esenciales.',
     ],
-    image: '/images/electrificacion.jpeg',
+    image: '/images/bateria.png',
     alt: 'Sistema de electrificación solar para una vivienda',
   },
   {
     title: 'Instalación y seguridad',
     category: 'Implementación',
     description:
-      'Se hace un implementación técnica normada y profesional que garantiza el funcionamiento seguro, confiable y duradero de cada componente del sistema.',
+      'Los equipos son instalados profesional por personal capacitado certificado que garantiza el funcionamiento seguro, confiable y duradero de cada componente del sistema.',
     benefits: [
       'Dimensionamiento de acuerdo con las necesidades de la vivienda.',
       'Protecciones eléctricas y cableado adecuados.',
       'Instalación pensada para facilitar el mantenimiento.',
     ],
-    image: '/images/causa-electrificacion.jpeg',
+    image: '/images/instalacion.png',
     alt: 'Programa de electrificación para comunidades',
+  },
+  {
+    title: 'Conexiones Electricas',
+    category: 'Generación eléctrica',
+    description:
+      'Gracias a la energía guardada en las bateria, las familias podran conectar sus aparatos electrónicos necesarios.',
+    benefits: [
+      'Aprovecha la radiación solar disponible en la comunidad.',
+      'Permite electrificar viviendas alejadas de la red.',
+      'Requiere mantenimiento periódico y sencillo.',
+    ],
+    image: '/images/conexiones.png',
+    alt: 'Instalación de electrificación mediante energía solar',
   },
 ];
 
@@ -720,4 +749,35 @@ export const formData = {
   labelStatement: 'Tipo de Trámite *',
   labelPredio: '¿Cuenta con predio? *',
   labelCoordinates: 'Coordenadas o ubicación aproximada *',
+};
+
+export const estufasBenefits = {
+  title: 'Beneficios de las estufas',
+  centerLabel: '/images/logos/estufa.svg',
+  items: [
+    {
+      label: 'Mejora la salud respiratoria',
+      icon: '/images/beneficio1.png',
+    },
+    {
+      label: 'Protege a mujeres, niñas y niños',
+      icon: '/images/beneficio2.png',
+    },
+    {
+      label: 'Reduce la deforestación',
+      icon: '/images/beneficio3.png',
+    },
+    {
+      label: 'Disminuye el gasto familiar',
+      icon: '/images/beneficio4.png',
+    },
+    {
+      label: 'Ahorra tiempo en el hogar',
+      icon: '/images/beneficio5.png',
+    },
+    {
+      label: 'Cocción más segura y eficiente',
+      icon: '/images/beneficio6.png',
+    },
+  ],
 };
