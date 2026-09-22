@@ -11,6 +11,9 @@ export default function ProjectInterestForm() {
   const [sending, setSending] = useState(false);
   const [message, setMessage] = useState('');
 
+  // Estado para controlar cuál pop-up está abierto ('terms', 'privacy' o null)
+  const [activeModal, setActiveModal] = useState<'terms' | 'privacy' | null>(null);
+
   async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
 
@@ -50,10 +53,7 @@ export default function ProjectInterestForm() {
 
   return (
     <section className="project-interest">
-      <form
-        className="project-interest__form"
-        onSubmit={handleSubmit}
-      >
+      <form className="project-interest__form" onSubmit={handleSubmit}>
         <div className="form-grid">
           <div className="form-field">
             <label htmlFor="name">
@@ -218,6 +218,7 @@ export default function ProjectInterestForm() {
             </small>
           </div>
 
+          {/* Campo de privacidad modificado con enlaces para abrir los pop-ups */}
           <div className="form-field form-field--full">
             <label className="privacy-checkbox">
               <input
@@ -225,10 +226,23 @@ export default function ProjectInterestForm() {
                 name="privacyConsent"
                 required
               />
-
               <span>
-                Acepto el aviso de privacidad y el tratamiento de
-                mis datos personales. *
+                He leído y acepto los{' '}
+                <button
+                  type="button"
+                  className="modal-link-btn"
+                  onClick={() => setActiveModal('terms')}
+                >
+                  Términos y Condiciones
+                </button>{' '}
+                y el{' '}
+                <button
+                  type="button"
+                  className="modal-link-btn"
+                  onClick={() => setActiveModal('privacy')}
+                >
+                  Aviso de Privacidad
+                </button>. *
               </span>
             </label>
           </div>
@@ -248,6 +262,50 @@ export default function ProjectInterestForm() {
           </p>
         )}
       </form>
+
+      {/* --- POP-UPS / MODALES --- */}
+      {activeModal && (
+        <div className="modal-backdrop" onClick={() => setActiveModal(null)}>
+          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+            <div className="modal-header">
+              <h3>
+                {activeModal === 'terms' ? 'Términos y Condiciones' : 'Aviso de Privacidad'}
+              </h3>
+              <button
+                type="button"
+                className="modal-close-btn"
+                onClick={() => setActiveModal(null)}
+              >
+                &times;
+              </button>
+            </div>
+
+            <div className="modal-body">
+              {activeModal === 'terms' ? (
+                <div>
+                  <p>Aquí colocas todo el texto legal correspondiente a los términos y condiciones de uso de la plataforma y el registro de proyectos...</p>
+                  <p>Puedes agregar más párrafos según sea necesario.</p>
+                </div>
+              ) : (
+                <div>
+                  <p>Aquí colocas el texto del aviso de privacidad, detallando el uso de los datos personales, finalidades y derechos ARCO...</p>
+                  <p>En cumplimiento con las normativas vigentes...</p>
+                </div>
+              )}
+            </div>
+
+            <div className="modal-footer">
+              <button
+                type="button"
+                className="modal-accept-btn"
+                onClick={() => setActiveModal(null)}
+              >
+                Cerrar
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   );
 }

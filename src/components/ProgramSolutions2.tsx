@@ -66,12 +66,12 @@ export default function ProgramSolutions({
             className="flex flex-col"
           >
             {/* Imagen */}
-            <div className="relative overflow-hidden rounded-2xl">
+            <div className="relative overflow-hidden rounded-2xl flex items-center justify-center">
               <img
                 src={solution.image}
                 alt={solution.alt}
                 loading="lazy"
-                className="h-56 w-auto object-cover transition duration-500 hover:scale-105 sm:h-64"
+                className="h-56 w-auto object-cover transition  duration-500 hover:scale-105 sm:h-64"
               />
 
               {/* Número */}
