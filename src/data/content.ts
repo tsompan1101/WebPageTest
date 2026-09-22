@@ -448,7 +448,7 @@ export const estufasSolutions = [
       'Aprovecha mejor el calor generado.',
       'Puede disminuir el tiempo dedicado a conseguir combustible.',
     ],
-    image: '/images/impacto-estufas.jpg',
+    image: '/images/combustion.png',
     alt: 'Estufa eficiente de leña del programa',
   },
   {
@@ -461,20 +461,20 @@ export const estufasSolutions = [
       'Mejora las condiciones del espacio de cocina.',
       'Beneficia especialmente a quienes pasan más tiempo en casa.',
     ],
-    image: '/images/estufas.jpeg',
+    image: '/images/exterior.png',
     alt: 'Estufa eficiente instalada en una vivienda',
   },
   {
     title: 'Construcción y uso adecuados',
     category: 'Seguridad',
     description:
-      'Una instalación correcta y el uso adecuado de la estufa son parte esencial del beneficio del programa.',
+      'Las estufas seran instaladas por personal capacitado, dando indicaciones y recomendaciones para ayudar a su rápida adopción.',
     benefits: [
       'Superficie y estructura diseñadas para cocinar de forma práctica.',
       'Instalación considerando ventilación y salida de humo.',
       'Capacitación para aprovechar correctamente la tecnología.',
     ],
-    image: '/images/causa-estufas.jpeg',
+    image: '/images/uso.png',
     alt: 'Programa de estufas eficientes de leña',
   },
 ];
@@ -500,7 +500,7 @@ export const gasolinerasSolutions = [
     benefits: [
       'Renovación e imagen corporativa: Transición de marca acompañada institucionalmente con condiciones de adhesión transparentes',
       'Garantía de suministro y eficiencia: Estándares operativos de alta calidad y certidumbre en el abasto continuo de combustible trazable.',
-      'Acompañamiento continuo: Asesoría técnica y legal permanente durante todo el proceso de integración a la red estatal.',
+      'Acompañamiento continuo: Asesoría técnica, regulatoria y legal permanente durante todo el proceso de integración a la red estatal.',
     ],
     image: '/images/gaso4.jpeg',
     alt: 'Estufa eficiente instalada en una vivienda',
