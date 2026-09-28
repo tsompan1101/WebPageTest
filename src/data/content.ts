@@ -46,7 +46,7 @@ export const contentBlocks = [
     id: 'estufas',
     title: 'Estufas Eficientes para el servicio del pueblo ',
     body:
-      'Construimos un futuro sustentable para las familias tamaulipecas mediante la evolución hacia tecnologías con un desarrollo sostenible. Para ello, dotamos a los hogares de estufas de leña de alta eficiencia diseñadas a la medida de nuestro territorio, y acompañamos a las comunidades con capacitación práctica para que se apropien de esta tecnología, manejen sus recursos y protejan su salud.',
+      'Construimos un futuro sustentable para las familias tamaulipecas impulsando el uso de tecnologías limpias. Equipamos los hogares con estufas de leña ecológicas, adaptadas a las necesidades de cada región, y capacitamos a las comunidades para que adopten esta tecnología, gestionen sus recursos forestales y cuiden su salud.',
     primaryCta: { label: 'Conoce el proyecto', href: '/estufas' },
     secondaryCta: { label: '', href: '' },
     image: '/images/estufas.jpeg',
@@ -124,7 +124,7 @@ export const sdg = {
       icon: '/images/ods/13.jpg',
     },
     {
-      image: '/images/ods/slide8.jpg',
+      image: '/images/ods/slied8.jpg',
       title: ' Vida de Ecosistemas Terrestres',
       body:
         'Al disminuir sustancialmente la demanda de madera para leña, se frena la presión sobre los bosques y selvas locales, mitigando la deforestación y la degradación del suelo.',
@@ -306,7 +306,7 @@ export const ElectrificacionImpact = [
     title: 'Electrificación al 100%',
     eyebrow: '¡Tenemos un reto!',
     description:
-      'Electrificar los 43 municipios. En Tamaulipas el **99%** de la población cuenta con interconexion eléctrica pero aún faltan familias acceder a la red de energía eléctrica. \n\nEsta propuesta busca superar esa condicion a través de la instalación de sistemas fotovoltaicos y completar la electrificacion al 100%, beneficiando a **+2,000 familias**.',
+      'Electrificar los 43 municipios. En Tamaulipas el **99%** de la población cuenta con interconexion eléctrica, pero aún faltan familias en acceder a la red de energía eléctrica. \n\nEsta propuesta busca superar esa condicion a través de la instalación de sistemas fotovoltaicos y completar la electrificacion al 100%, beneficiando a **+2,000 familias**.',
     statLabel: '82 Familias Beneficiadas',
     // "current" y "total" definen el % de cada barra (current / total).
     progressBars: [
@@ -426,7 +426,7 @@ export const electrificacionSolutions = [
     title: 'Conexiones Electricas',
     category: 'Generación eléctrica',
     description:
-      'Gracias a ello, las familias podran conectar sus aparatos electrónicos necesarios.',
+      'Gracias a ello, las familias podran conectar sus aparatos electrónicos necesarios, como frigobar, focos, etc.',
     benefits: [
       'Aprovecha la radiación solar disponible en la comunidad.',
       'Permite electrificar viviendas alejadas de la red.',
