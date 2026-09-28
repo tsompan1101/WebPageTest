@@ -106,7 +106,7 @@ export default function Beneficios({
   const angleStep = items.length > 0 ? 360 / items.length : 0;
 
   return (
-    <section className="container-page py-16 sm:py-20">
+    <section className="container-page py-16 sm:py-20" id="Beneficios">
       <h2 className="text-center font-display text-2xl font-extrabold text-brand-ink sm:text-3xl">
         {title}
       </h2>
