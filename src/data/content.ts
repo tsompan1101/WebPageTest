@@ -124,7 +124,7 @@ export const sdg = {
       icon: '/images/ods/13.jpg',
     },
     {
-      image: '/images/ods/slide8.png',
+      image: '/images/ods/slide8.jpg',
       title: ' Vida de Ecosistemas Terrestres',
       body:
         'Al disminuir sustancialmente la demanda de madera para leña, se frena la presión sobre los bosques y selvas locales, mitigando la deforestación y la degradación del suelo.',
