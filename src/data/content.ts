@@ -36,9 +36,9 @@ export const contentBlocks = [
     id: 'electrificacion',
     title: '¡Electrificando Tamaulipas!',
     body:
-      'Como un acto fundamental de justicia social para reducir la brecha de desigualdad en el estado, impulsamos el programa de Electrificación al 100%. Llevamos energía a donde antes no la había, garantizando a las familias vulnerables el acceso a sistemas fotovoltaicos autónomos y eficientes que transforman la calidad de vida y protegen la salud en sus hogares.',
+      'Como un acto fundamental de justicia social para reducir la brecha de desigualdad en el estado, impulsamos el programa de **Electrificación al 100%**. Llevamos energía a donde antes no la había, garantizando a las familias el acceso a sistemas fotovoltaicos autónomos y eficientes que transforman la calidad de vida y protegen la salud en sus hogares.',
     primaryCta: { label: 'Conoce el proyecto', href: '/electrificacion' },
-    secondaryCta: { label: '', href: '/donaciones' },
+    secondaryCta: { label: '', href: '' },
     image: '/images/electrificacion.jpeg',
     imageSide: 'right' as const,
   },
@@ -46,7 +46,7 @@ export const contentBlocks = [
     id: 'estufas',
     title: 'Estufas Eficientes para el servicio del pueblo ',
     body:
-      'Trabajamos para aumentar la justicia social y promover un desarrollo sustentable con bienestar social, impulsando tecnologías de alta eficiencia mediante estufas eficientes de leña adecuadas para el pueblo y las familias tamaulipecas, con el propósito de optimizar el consumo de recursos y proteger el derecho fundamental a la salud en cada comunidad.',
+      'Construimos un futuro sustentable para las familias tamaulipecas mediante la evolución hacia tecnologías con un desarrollo sostenible. Para ello, dotamos a los hogares de estufas de leña de alta eficiencia diseñadas a la medida de nuestro territorio, y acompañamos a las comunidades con capacitación práctica para que se apropien de esta tecnología, manejen sus recursos y protejan su salud.',
     primaryCta: { label: 'Conoce el proyecto', href: '/estufas' },
     secondaryCta: { label: '', href: '' },
     image: '/images/estufas.jpeg',
@@ -57,7 +57,7 @@ export const contentBlocks = [
     title: '¡Abasteciendo a Tamaulipas con justicia social!',
     body:
       'Conoce un modelo para abastecer combustible generando mayor beneficio económico y mejora en la economía local. A través de este esquema, buscamos impulsar a los sectores productivos y modernizar la distribución de los energéticos para que cada litro fortalezca el ingreso de las familias, garantizando un acceso más equitativo, precios justos y un desarrollo que verdaderamente se quede en las manos de nuestra gente.',
-    primaryCta: { label: 'Sumate a este modelo', href: '/gasolineras' },
+    primaryCta: { label: 'Súmate a este modelo', href: '/gasolineras' },
     secondaryCta: { label: 'Conocer ubicación de las Gasolineras', href: 'https://sieet.tamaulipas.gob.mx/mapa?lat=24.527891&lng=-97.622541&zoom=6.55&layers=estaciones_servicio_petroliferos' },
     image: '/images/gaso1.jpeg',
     imageSide: 'right' as const,
@@ -119,7 +119,7 @@ export const sdg = {
       image: '/images/ods/slide7.jpg',
       title: ' Acción por el Clima',
       body:
-        'Reduce la emisión de gases de efecto invernadero (como CO2, Metanol, PM2.5) y hollín, contribuyendo directamente a la mitigación del cambio climático.',
+        'Reduce la emisión de gases de efecto invernadero (como CO2, Metanol, PM^2.5^) y hollín, contribuyendo directamente a la mitigación del cambio climático.',
       goals: [ ],
       icon: '/images/ods/13.jpg',
     },
@@ -272,14 +272,14 @@ export const videoTestimonials = [
 export const testimonials = [
   {
     id: 'testimonio 1',
-    name: 'Aurelia Padilla Zuñiga.',
+    name: 'Aurelia Padilla Zúñiga.',
     role: 'Beneficiaria del programa de Estufas Eficientes de Leña',
-    quote: 'Ahora si podre cuidarme de los pulmones, pues alla estaba en la interperia y me daba todo.',
+    quote: 'Ahora si podre cuidarme de los pulmones, pues allá estaba en la interperia y me daba todo.',
     slideImage: '/images/testimonio_estufa1.png',
   },
   {
     id: 'testimonio 2',
-    name: '.',
+    name: '',
     role: 'Beneficiaria del programa de Electrificación',
     quote: 'Cambia bastante porque pues ya puedes tener un abanico, puedes tener, por decir, una televisión.',
     slideImage: '/images/testimonio_electrificacion1.png',
@@ -306,7 +306,7 @@ export const ElectrificacionImpact = [
     title: 'Electrificación al 100%',
     eyebrow: '¡Tenemos un reto!',
     description:
-      'Electrificar los 43 municipios. En Tamaulipas el **99%** de la población cuenta con interconexion eléctrica pero faltan familias que no cuentan con acceso a la red eléctrica. \n\nEsta propuesta busca superar esa condicion con sistemas fotovoltaicos y completar la electrificacion con el 100%, beneficiando a **+2,000 familias**.',
+      'Electrificar los 43 municipios. En Tamaulipas el **99%** de la población cuenta con interconexion eléctrica pero aún faltan familias acceder a la red de energía eléctrica. \n\nEsta propuesta busca superar esa condicion a través de la instalación de sistemas fotovoltaicos y completar la electrificacion al 100%, beneficiando a **+2,000 familias**.',
     statLabel: '82 Familias Beneficiadas',
     // "current" y "total" definen el % de cada barra (current / total).
     progressBars: [
@@ -328,7 +328,7 @@ export const EstufasImpact = [
     title: 'Estufas Eficientes',
     eyebrow: '¿Cómo vamos?',
     description:
-      'Con el programa de Estufas Eficientes buscamos brindar  los hogares de nuestras comunidades y combatir la pobreza energética. \n\nA la fecha, hemos sustituido fogones tradicionales en los municipios de **Casas**, **Gustavo Díaz Ordaz**, **Miquihuana**, **Abasolo**, **Jiménez**, **González**, **Soto la Marina** y **Victoria**, eliminando el humo en el interior de las viviendas para proteger la salud pulmonar de **más** de **400 personas** y logrando un uso mucho más eficiente de la energía térmica.',
+      'A través del programa de impulsamos el bienestar en las comunidades tamaulipecas, brindando a los hogares tecnología diseñada para adecuarse a las necesidades de las familias, fomentando su apropiación mediante la enseñanza y el uso cotidiano. \n\nA la fecha, hemos sustituido fogones tradicionales por estufas de leña eficientes en los municipios de **Casas**, **Gustavo Díaz Ordaz**, **Miquihuana**, **Abasolo**, **Jiménez**, **González**, **Soto la Marina** y **Victoria**, eliminando el humo en el interior de las viviendas para proteger la salud pulmonar de **más** de **400 personas** y logrando un uso mucho más eficiente de la energía térmica.',
     statLabel: '400+ Personas Beneficiadas',
     // "current" y "total" definen el % de cada barra (current / total).
     progressBars: [
@@ -336,10 +336,10 @@ export const EstufasImpact = [
       { label: '8 municipios beneficiados de nuestro objetivo 43', current: 8, total: 43 },
     ],
     question: '¡Conoce como es que sumamos en pro de la Justicia Social!',
-    linkLabel: 'Escucha el testimonios de las Familias Beneficiadas',
+    linkLabel: 'Escucha los testimonios de las Familias Beneficiadas',
     linkHref: '/testimonios',
     secondaryCta: { label: '¿A dónde va el dinero?', href: '#proveedores' },
-    primaryCta: { label: '¡Dona o Trabaja con Nosotros!', href: '#', action: 'contact' },
+    primaryCta: { label: '¡Dona y Únete a la iniciativa!', href: '#', action: 'contact' },
     backgroundImage: '/images/impacto-estufas.jpg',
   },
 ];
@@ -371,11 +371,11 @@ export const panelEspecificaciones = [
     title: 'Panel solar de 630 watts',
     category: 'Paneles',
     description:
-      'Panel Solar con construcción de doble vidrio (Glass-Glass), eficiencia mínima del 21 % y tolerancia de potencia de 0 a +5 W. El módulo deberá contar con:',
+      'Construcción de doble vidrio (Glass-Glass), eficiencia mínima del 21 % y tolerancia de potencia de 0 a +5 W. El módulo deberá contar con:',
     benefits: [
       'Marco de aluminio anodizado resistente a la corrosión.',
-      'Vidrio templado de alta resistencia en ambas caras y estar diseñado para operar en condiciones ambientales exteriores.',
-      'Resistencia a la degradación inducida por potencial (PID), humedad y niebla salina',
+      'Vidrio templado de alta resistencia en ambas caras y diseñado para operar en condiciones ambientales exteriores.',
+      'Resistencia a la degradación inducida por potencial (PID), humedad y niebla salina.',
     ],
     image: '/images/panelEspecificado.png',
     alt: 'Estufa eficiente de leña del programa',
@@ -387,7 +387,7 @@ export const electrificacionSolutions = [
     title: 'Sistema fotovoltaico aislado',
     category: 'Generación solar',
     description:
-      'Se usan Paneles fotovoltaicos para brindar electricidad a comunidades sin conexión a la red eléctrica.',
+      'Brindan electricidad a comunidades sin conexión a la red eléctrica.',
     benefits: [
       'Aprovecha la radiación solar disponible en la comunidad.',
       'Permite electrificar viviendas alejadas de la red.',
@@ -413,7 +413,7 @@ export const electrificacionSolutions = [
     title: 'Instalación y seguridad',
     category: 'Implementación',
     description:
-      'Los equipos son instalados profesional por personal capacitado certificado que garantiza el funcionamiento seguro, confiable y duradero de cada componente del sistema.',
+      'Equipos instalados por personal capacitado y certificado que garantiza el funcionamiento seguro, confiable y duradero de cada componente del sistema.',
     benefits: [
       'Dimensionamiento de acuerdo con las necesidades de la vivienda.',
       'Protecciones eléctricas y cableado adecuados.',
@@ -426,7 +426,7 @@ export const electrificacionSolutions = [
     title: 'Conexiones Electricas',
     category: 'Generación eléctrica',
     description:
-      'Gracias a la energía guardada en las bateria, las familias podran conectar sus aparatos electrónicos necesarios.',
+      'Gracias a ello, las familias podran conectar sus aparatos electrónicos necesarios.',
     benefits: [
       'Aprovecha la radiación solar disponible en la comunidad.',
       'Permite electrificar viviendas alejadas de la red.',
@@ -442,7 +442,7 @@ export const estufasSolutions = [
     title: 'Combustión más eficiente',
     category: 'Eficiencia',
     description:
-      'El diseño de una estufa eficiente busca aprovechar mejor el calor de la leña para cocinar con menor consumo de combustible.',
+      'El diseño de la estufa eficiente busca aprovechar mejor el calor de la leña para cocinar con menor consumo de combustible.',
     benefits: [
       'Reduce la cantidad de leña necesaria para cocinar.',
       'Aprovecha mejor el calor generado.',
@@ -468,7 +468,7 @@ export const estufasSolutions = [
     title: 'Construcción y uso adecuados',
     category: 'Seguridad',
     description:
-      'Las estufas seran instaladas por personal capacitado, dando indicaciones y recomendaciones para ayudar a su rápida adopción.',
+      'Las estufas son instaladas por personal capacitado, dando indicaciones y recomendaciones para ayudar a su rápida adopción.',
     benefits: [
       'Superficie y estructura diseñadas para cocinar de forma práctica.',
       'Instalación considerando ventilación y salida de humo.',
@@ -486,7 +486,7 @@ export const gasolinerasSolutions = [
     description:
       'Inicia tu proyecto con el respaldo institucional del Estado para expandir la red de abasto eficiente, seguro y de precio justo en las regiones productivas de Tamaulipas.',
     benefits: [
-      'Registro preliminar ágil: Proceso sencillo para capturar los datos esenciales del inversionista o desarrollador, empresa, ubicación municipal y estatus del predio.',
+      'Registro preliminar ágil: Proceso sencillo para capturar los datos esenciales del inversionista o desarrollador, empresa, ubicación y estatus del predio.',
       'Prevalidación documental integral: Acompañamiento técnico y legal en la revisión de propiedad del terreno, georreferenciación, uso de suelo preliminar, RFC y personalidad jurídica.',
     ],
     image: '/images/gaso3.jpeg',
@@ -496,7 +496,7 @@ export const gasolinerasSolutions = [
     title: '¡Incorpora tu Estación al Programa!',
     category: 'Informes',
     description:
-      'Si ya cuentas con una estación en operación, incorpórala a la red del programa para sumar esfuerzos en la garantía de la justicia social y el desarrollo sustentable de las comunidades.',
+      'Si ya cuentas con una Estación de Servicio en operación, incorpórala a la red del programa para sumar esfuerzos en la garantía de la justicia social y el desarrollo sustentable de las comunidades.',
     benefits: [
       'Renovación e imagen corporativa: Transición de marca acompañada institucionalmente con condiciones de adhesión transparentes',
       'Garantía de suministro y eficiencia: Estándares operativos de alta calidad y certidumbre en el abasto continuo de combustible trazable.',
@@ -540,7 +540,7 @@ export const gasolinerasInfo= [
     title: 'Franquicias Gasolineras del Pueblo',
     eyebrow: 'Opción de franquicia confiable, socialmente útil y operativamente viable.',
     description:
-      'Gasolineras del Pueblo es un modelo de franquicia con identidad tamaulipeca, orientado a acercar combustibles de calidad, precios justos y atención confiable a las regiones productivas, turísticas y sociales del Estado de Tamaulipas. A través de una operación regulada, trazable y acompañada institucionalmente, el proyecto busca integrar a inversionistas y operadores que compartan una visión de servicio, cumplimiento y desarrollo regional soberano.',
+      'Gasolineras del Pueblo es un modelo de franquicia con identidad tamaulipeca, orientado a acercar combustibles de calidad, precios justos y atención confiable a las regiones productivas, turísticas y sociales del estado de Tamaulipas. A través de una operación regulada, trazable y acompañada institucionalmente, el proyecto busca integrar a inversionistas y operadores que compartan una visión de servicio, cumplimiento y desarrollo regional soberano.',
     name: '',
     image: '/images/gaso2.jpeg',
   },
@@ -756,23 +756,19 @@ export const estufasBenefits = {
   centerLabel: '/images/logos/estufa.svg',
   items: [
     {
-      label: 'Mejora la salud respiratoria',
+      label: 'Protege la salud respiratoria de las familias.',
       icon: '/images/beneficio1.png',
     },
     {
-      label: 'Protege a mujeres, niñas y niños',
-      icon: '/images/beneficio2.png',
-    },
-    {
-      label: 'Reduce la deforestación',
+      label: 'Reduce la deforestación.',
       icon: '/images/beneficio3.png',
     },
     {
-      label: 'Disminuye el gasto familiar',
+      label: 'Apoyo y capacitación gratuita.',
       icon: '/images/beneficio4.png',
     },
     {
-      label: 'Ahorra tiempo en el hogar',
+      label: 'Instalación personalizada y segura.',
       icon: '/images/beneficio5.png',
     },
     {
