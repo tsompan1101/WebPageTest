@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { sdg } from '@/data/content';
+import FormattedText from '@/components/FormattedText';
 
 export default function SdgSection() {
   const [index, setIndex] = useState(0);
@@ -15,21 +16,42 @@ export default function SdgSection() {
   return (
     <section className="container-page py-12">
       <div className="relative overflow-hidden rounded-card">
-        {/* Imagen de fondo del slide activo */}
+        {/* Contenedor principal unificado con altura fija/mínima para todos los slides */}
         <div
           key={slide.image}
-          className="relative flex min-h-[820px] w-full sm:min-h-[480px]"
-          style={{
-            backgroundImage: `linear-gradient(
-              0deg,
-              rgba(11,13,16,0.85) 0%,
-              rgba(11,13,16,0.35) 55%,
-              rgba(11,13,16,0.15) 100%
-            ), url(${slide.image})`,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-          }}
+          className="relative flex min-h-[600px] w-full sm:min-h-[650px] overflow-hidden bg-transparent"
         >
+          {/* 1. Fondo difuminado ampliado para cubrir cualquier espacio vacío sin deformar */}
+          <div
+            className="absolute -inset-1 bg-cover bg-center filter blur-2xl opacity-80 scale-125 pointer-events-none"
+            style={{ backgroundImage: `url(${slide.image})` }}
+          />
+
+          {/* Capa de gradiente oscuro para asegurar la legibilidad del texto */}
+          <div
+            className="absolute inset-0 z-0"
+            style={{
+              background: `linear-gradient(
+                0deg,
+                rgba(11,13,16,0.92) 0%,
+                rgba(11,13,16,0.55) 55%,
+                rgba(11,13,16,0.35) 100%
+              )`
+            }}
+          />
+
+          {/* 2. Imagen principal nítida cubriendo el espacio de manera fluida (sin espacios blancos) */}
+          <div className="absolute inset-0 z-0 flex items-center justify-center p-4">
+            <img
+              src={slide.image}
+              alt=""
+              className="h-full w-full object-cover opacity-35 pointer-events-none rounded-card"
+            />
+          </div>
+
+          {/* =====================================================
+             CONTENIDO DE LOS SLIDES
+           ===================================================== */}
           {isFirstSlide ? (
             /* =====================================================
                PRIMER SLIDE
@@ -41,8 +63,10 @@ export default function SdgSection() {
               <div className="flex w-full items-center justify-center sm:w-1/2">
                 <img
                   src={slide.icon}
+                  loading='lazy'
                   alt="Objetivos de Desarrollo Sostenible"
                   className="h-auto w-64 object-contain sm:w-80 md:w-[400px] lg:w-[450px] rounded-full"
+                  style={{ imageRendering: 'high-quality' }}
                 />
               </div>
 
@@ -53,7 +77,7 @@ export default function SdgSection() {
                 </h3>
 
                 <p className="mt-4 whitespace-pre-line text-white/85">
-                  {slide.body}
+                  <FormattedText text={slide.body} />
                 </p>
 
                 {/* Goals SOLO en el primer slide */}
@@ -74,27 +98,28 @@ export default function SdgSection() {
           ) : (
             /* =====================================================
                SLIDES 2-8
-               Imagen ODS más grande + texto ligeramente arriba
+               Imagen ODS centrada + texto centrado
              ===================================================== */
             <div className="relative z-10 flex w-full flex-col items-center justify-center p-8 text-white sm:p-12">
 
               {/* Imagen ODS */}
-              <div className="flex w-full items-center">
+              <div className="flex w-full items-center justify-center">
                 <img
                   src={slide.icon}
                   alt=""
                   className="h-20 w-20 object-contain sm:h-48 sm:w-48 md:h-56 md:w-56 lg:h-64 lg:w-64 rounded-3xl"
+                  style={{ imageRendering: 'high-quality' }}
                 />
               </div>
 
               {/* Texto */}
-              <div className="relative -mt-2 max-w-2xl text-center sm:-mt-4">
+              <div className="relative mt-4 max-w-2xl text-center">
                 <h3 className="font-display text-2xl font-bold sm:text-3xl">
                   {slide.title}
                 </h3>
 
                 <p className="mt-4 whitespace-pre-line text-white/85">
-                  {slide.body}
+                  <FormattedText text={slide.body} />
                 </p>
               </div>
             </div>

@@ -1,3 +1,5 @@
+import FormattedText from '@/components/FormattedText';
+
 interface ContentBlockProps {
   title: string;
   body: string;
@@ -43,7 +45,7 @@ export default function ContentBlock({
           >
             {title}
           </h3>
-          <p className="-mt-3 text-brand-muted text-justify sm:mt-4">{body}</p>
+          <p className="-mt-3 text-brand-muted text-justify sm:mt-4"><FormattedText text={body} /></p>
 
           {(primaryCta || secondaryCta) && (
             <div className="mt-6 flex flex-wrap gap-3">

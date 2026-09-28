@@ -5,10 +5,15 @@ import type { ReactNode } from 'react';
  * convierte en JSX real (nada de dangerouslySetInnerHTML):
  *
  *   \n          -> salto de línea
- *   **texto**   -> texto en negrita
+ *   **texto**   -> negrita
+ *   *texto*     -> itálica
+ *   __texto__   -> subrayado
+ *   ~~texto~~   -> letra chica (small)
+ *   ^texto^     -> subíndice
+ *   ^^texto^^   -> superíndice
  *
  * Ejemplo en content.ts:
- *   description: 'Funciona con combustible.\nLas **gasolineras del pueblo** son...'
+ *   description: 'Funciona con combustible.\nLas **gasolineras del pueblo** son *muy* buenas.\n__Importante__: revisa el ~~texto legal~~ y el precio^2^.'
  *
  * Uso en cualquier componente:
  *   <p><FormattedText text={data.description} /></p>
@@ -20,7 +25,7 @@ export default function FormattedText({ text }: { text: string }) {
     <>
       {lines.map((line, i) => (
         <span key={i}>
-          {parseBold(line)}
+          {parseInline(line)}
           {i < lines.length - 1 && <br />}
         </span>
       ))}
@@ -28,15 +33,37 @@ export default function FormattedText({ text }: { text: string }) {
   );
 }
 
-function parseBold(line: string): ReactNode[] {
-  // Corta el string en pedazos, quedándose también con los que hacen
-  // match (los **...**), gracias al grupo de captura en el regex.
-  const parts = line.split(/(\*\*[^*]+\*\*)/g);
+// Orden importante: los patrones más "específicos" o largos van primero,
+// para que **negrita** no sea capturado por error como *itálica*, y
+// ^^superíndice^^ no sea capturado como ^subíndice^.
+const TOKEN_REGEX =
+  /(\*\*[^*]+\*\*|__[^_]+__|~~[^~]+~~|\^\^[^^]+\^\^|\*[^*]+\*|\^[^^]+\^)/g;
+
+function parseInline(line: string): ReactNode[] {
+  const parts = line.split(TOKEN_REGEX);
 
   return parts.map((part, i) => {
+    if (!part) return null;
+
     if (part.startsWith('**') && part.endsWith('**')) {
       return <strong key={i}>{part.slice(2, -2)}</strong>;
     }
+    if (part.startsWith('__') && part.endsWith('__')) {
+      return <u key={i}>{part.slice(2, -2)}</u>;
+    }
+    if (part.startsWith('~~') && part.endsWith('~~')) {
+      return <small key={i}>{part.slice(2, -2)}</small>;
+    }
+    if (part.startsWith('^^') && part.endsWith('^^')) {
+      return <sup key={i}>{part.slice(2, -2)}</sup>;
+    }
+    if (part.startsWith('^') && part.endsWith('^')) {
+      return <sub key={i}>{part.slice(1, -1)}</sub>;
+    }
+    if (part.startsWith('*') && part.endsWith('*')) {
+      return <em key={i}>{part.slice(1, -1)}</em>;
+    }
+
     return part;
   });
 }

@@ -39,7 +39,10 @@ export default function TestimonialAutoSlider() {
             “{t.quote}”
           </p>
           <p className="mt-4 text-sm text-white/80">
-            — {t.name}, {t.role}
+            {t.name}
+          </p>
+          <p className="mt-4 text-sm text-white/80">
+            {t.role}
           </p>
         </div>
       </div>
