@@ -230,8 +230,13 @@ export const equipo = [
   },
   {
     title: 'Juan Antonio Rocha Morelos',
-    description: 'Lic. en Comercio Internacional',
+    description: '',
     image: '/images/persona4.jpg',
+  },
+  {
+    title: 'Alberto Zamarron de la Cruz',
+    description: '',
+    image: '/images/persona5.jpg',
   },
 ];
 
@@ -317,7 +322,7 @@ export const ElectrificacionImpact = [
     linkLabel: 'Acompañanos a Electrificar Tamaulipas',
     linkHref: '/testimonios',
     secondaryCta: { label: '¿Cómo funciona?', href: '#solutions' },
-    primaryCta: { label: 'Hagamoslo Posible Juntos', href: '/donaciones-paneles' },
+    primaryCta: { label: 'Hagámoslo Posible Juntos', href: '/donaciones-paneles' },
     backgroundImage: '/images/impacto-electrificacion.jpg',
   },
 ];
@@ -328,7 +333,7 @@ export const EstufasImpact = [
     title: 'Estufas Eficientes',
     eyebrow: '¿Cómo vamos?',
     description:
-      'A través del programa de impulsamos el bienestar en las comunidades tamaulipecas, brindando a los hogares tecnología diseñada para adecuarse a las necesidades de las familias, fomentando su apropiación mediante la enseñanza y el uso cotidiano. \n\nA la fecha, hemos sustituido fogones tradicionales por estufas de leña eficientes en los municipios de **Casas**, **Gustavo Díaz Ordaz**, **Miquihuana**, **Abasolo**, **Jiménez**, **González**, **Soto la Marina** y **Victoria**, eliminando el humo en el interior de las viviendas para proteger la salud pulmonar de **más** de **400 personas** y logrando un uso mucho más eficiente de la energía térmica.',
+      'A través del programa buscamos impulsar el bienestar en las comunidades tamaulipecas, brindando a los hogares tecnología diseñada para adecuarse a las necesidades de las familias, fomentando su apropiación mediante la enseñanza y el uso cotidiano. \n\nA la fecha, hemos sustituido fogones tradicionales por estufas de leña eficientes en los municipios de **Casas**, **Gustavo Díaz Ordaz**, **Miquihuana**, **Abasolo**, **Jiménez**, **González**, **Soto la Marina** y **Victoria**, eliminando el humo en el interior de las viviendas para proteger la salud pulmonar de **más** de **400 personas** y logrando un uso mucho más eficiente de la energía térmica.',
     statLabel: '400+ Personas Beneficiadas',
     // "current" y "total" definen el % de cada barra (current / total).
     progressBars: [
@@ -338,7 +343,7 @@ export const EstufasImpact = [
     question: '¡Conoce como es que sumamos en pro de la Justicia Social!',
     linkLabel: 'Escucha los testimonios de las Familias Beneficiadas',
     linkHref: '/testimonios',
-    secondaryCta: { label: '¿A dónde va el dinero?', href: '#proveedores' },
+    secondaryCta: { label: '¿Qué beneficios brinda?', href: '#Beneficios' },
     primaryCta: { label: '¡Dona y Únete a la iniciativa!', href: '#', action: 'contact' },
     backgroundImage: '/images/impacto-estufas.jpg',
   },
