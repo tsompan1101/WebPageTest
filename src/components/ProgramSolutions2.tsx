@@ -71,7 +71,7 @@ export default function ProgramSolutions({
                 src={solution.image}
                 alt={solution.alt}
                 loading="lazy"
-                className="h-56 w-auto object-cover transition  duration-500 hover:scale-105 sm:h-64"
+                className="h-56 w-full object-cover transition  duration-500 hover:scale-105 sm:h-64"
               />
 
               {/* Número */}

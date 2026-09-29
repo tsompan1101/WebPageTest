@@ -4,15 +4,20 @@ export default function ConocenosGrid() {
   return (
     <section id="conocenos" className="container-page py-16">
       <h2 className="text-center font-display text-2xl font-bold text-brand-ink sm:text-2xl">
-        Conoce el a equipo
+        Conoce a tu equipo.
       </h2>
       <p className="mx-auto mt-2 max-w-xl text-center text-brand-muted">
         Ellos son los encargados de hacer esto posible.
       </p>
 
-      <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+      {/* Cambiamos grid por flex flex-wrap justify-center para centrar las filas incompletas */}
+      <div className="mt-10 flex flex-wrap justify-center gap-6">
         {equipo.map((cause) => (
-          <div key={cause.title} tabIndex={0} className="group relative rounded-card pantone-glow outline-none">
+          <div
+            key={cause.title}
+            tabIndex={0}
+            className="group relative rounded-card pantone-glow outline-none w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]"
+          >
             <div className="relative aspect-[3/4] overflow-hidden rounded-card bg-white shadow-sm ring-1 ring-black/5 transition group-hover:shadow-md group-focus-visible:shadow-md">
               <img
                 src={cause.image}
