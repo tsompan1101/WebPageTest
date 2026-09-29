@@ -56,9 +56,9 @@ export const contentBlocks = [
     id: 'gasolineras',
     title: '¡Abasteciendo a Tamaulipas con justicia social!',
     body:
-      'Conoce un modelo para abastecer combustible generando mayor beneficio económico y mejora en la economía local. A través de este esquema, buscamos impulsar a los sectores productivos y modernizar la distribución de los energéticos para que cada litro fortalezca el ingreso de las familias, garantizando un acceso más equitativo, precios justos y un desarrollo que verdaderamente se quede en las manos de nuestra gente.',
+      'Conoce el modelo para abastecer combustibles generando mayor beneficio económico y con ello mejorando la economía local. A través de este esquema, buscamos impulsar a los sectores productivos y modernizar la distribución de los energéticos para que cada litro fortalezca el ingreso de las familias, garantizando un acceso más equitativo, precios justos y un desarrollo que verdaderamente se quede en las manos de nuestra gente.',
     primaryCta: { label: 'Súmate a este modelo', href: '/gasolineras' },
-    secondaryCta: { label: 'Conocer ubicación de las Gasolineras', href: 'https://sieet.tamaulipas.gob.mx/mapa?lat=24.527891&lng=-97.622541&zoom=6.55&layers=estaciones_servicio_petroliferos' },
+    secondaryCta: { label: 'Ubica tu gasolinera', href: 'https://sieet.tamaulipas.gob.mx/mapa?lat=24.527891&lng=-97.622541&zoom=6.55&layers=estaciones_servicio_petroliferos' },
     image: '/images/gaso1.jpeg',
     imageSide: 'right' as const,
   },
@@ -77,31 +77,31 @@ export const sdg = {
     },
     {
       image: '/images/ods/slide2.jpg',
-      title: ' Salud y bienestar en cada comunidad',
+      title: '',
       body:
-        'Disminuye drásticamente la exposición al humo intra-domiciliario y partículas finas dentro de los hogares, previniendo enfermedades respiratorias crónicas que afectan principalmente a mujeres, niños y adultos mayores.',
+        'Disminuye drásticamente la exposición al humo intra-domiciliario y partículas finas dentro de los hogares, previniendo enfermedades respiratorias crónicas que afectan principalmente a niños, mujeres y adultos mayores.',
       goals: [],
       icon: '/images/ods/3.jpg',
     },
     {
       image: '/images/ods/slide3.jpg',
-      title: ' Igualdad de Genero',
+      title: '',
       body:
-        ' Reduce las horas que históricamente las mujeres y niñas han dedicado diariamente a la recolección de leña y a las tareas de cocina, liberando tiempo valioso que puede ser destinado a la educación, actividades productivas o el descanso.',
+        'Reduce las horas que históricamente las mujeres y niñas han dedicado diariamente a la recolección de leña y a las tareas de cocina, liberando tiempo valioso que puede ser destinado a la educación, actividades recreativas o el descanso.',
       goals: [ ],
       icon: '/images/ods/5.jpg',
     },
     {
       image: '/images/ods/slide4.jpg',
-      title: ' Energía Asequible y No Contaminante',
+      title: '',
       body:
-        'Proporciona una alternativa tecnológica más eficiente y limpia para la cocción de alimentos en zonas vulnerables o sin acceso a gas, optimizando el aprovechamiento del recurso energético térmico a través de la eficiencia energética.',
+        'Proporciona una alternativa tecnológica, más eficiente y limpia, para la cocción de alimentos en zonas vulnerables o sin acceso a gas, optimizando el aprovechamiento del recurso energético térmico a través de la eficiencia energética.',
       goals: [ ],
       icon: '/images/ods/7.jpg',
     },
     {
       image: '/images/ods/slide5.jpg',
-      title: ' Ciudades y Comunidades Sostenibles',
+      title: '',
       body:
         'Mejora la calidad del aire local e impulsa condiciones de vivienda más seguras y habitables en comunidades rurales y periurbanas.',
       goals: [ ],
@@ -109,7 +109,7 @@ export const sdg = {
     },
     {
       image: '/images/ods/slide6.jpg',
-      title: ' Producción y Consumo Responsables',
+      title: '',
       body:
         'Promueve un uso más eficiente de la biomasa al ahorrar entre un 70%-80% menos de leña por hogar, fomentando hábitos de consumo térmico sostenibles.',
       goals: [ ],
@@ -117,7 +117,7 @@ export const sdg = {
     },
     {
       image: '/images/ods/slide7.jpg',
-      title: ' Acción por el Clima',
+      title: '',
       body:
         'Reduce la emisión de gases de efecto invernadero (como CO2, Metanol, PM^2.5^) y hollín, contribuyendo directamente a la mitigación del cambio climático.',
       goals: [ ],
@@ -125,7 +125,7 @@ export const sdg = {
     },
     {
       image: '/images/ods/slied8.jpg',
-      title: ' Vida de Ecosistemas Terrestres',
+      title: '',
       body:
         'Al disminuir sustancialmente la demanda de madera para leña, se frena la presión sobre los bosques y selvas locales, mitigando la deforestación y la degradación del suelo.',
       goals: [ ],
@@ -191,11 +191,10 @@ export const footer = {
   description:
     'Transformando el rezago energético en justicia social a través de tecnologías limpias y eficientes.',
   quickLinks: [
-    { label: 'Donaciones', href: '/donaciones' },
+    { label: 'Únete', href: '/donaciones' },
     { label: 'Testimonios', href: '/testimonios' },
     { label: 'Conócenos', href: '/conocenos' },
     { label: 'Inicio', href: '/' },
-    { label: 'Causa Social', href: '/#programas' },
   ],
   redirectIcon: '/images/logos/redirect.svg',
   contact: {
@@ -311,7 +310,7 @@ export const ElectrificacionImpact = [
     title: 'Electrificación al 100%',
     eyebrow: '¡Tenemos un reto!',
     description:
-      'Electrificar los 43 municipios. En Tamaulipas el **99%** de la población cuenta con interconexion eléctrica, pero aún faltan familias en acceder a la red de energía eléctrica. \n\nEsta propuesta busca superar esa condicion a través de la instalación de sistemas fotovoltaicos y completar la electrificacion al 100%, beneficiando a **+2,000 familias**.',
+      'Electrificar los 43 municipios. En Tamaulipas el **99.97%** de la población cuenta con interconexion eléctrica, pero aún faltan familias en acceder a la red de energía eléctrica. \n\nEsta propuesta busca superar esa condicion a través de la instalación de sistemas fotovoltaicos y completar la electrificacion al 100%, beneficiando a **+2,000 familias**.',
     statLabel: '82 Familias Beneficiadas',
     // "current" y "total" definen el % de cada barra (current / total).
     progressBars: [
@@ -366,7 +365,7 @@ export const GasolinerasImpact = [
     linkLabel: 'Testimonios de Familias',
     linkHref: '/testimonios',
     secondaryCta: { label: '¡Participa!', href: '/formulario' },
-    primaryCta: { label: 'Ubicar Gasolinera', href: 'https://sieet.tamaulipas.gob.mx/mapa?lat=24.527891&lng=-97.622541&zoom=6.55&layers=estaciones_servicio_petroliferos' },
+    primaryCta: { label: 'Ubica tu Gasolinera', href: 'https://sieet.tamaulipas.gob.mx/mapa?lat=24.527891&lng=-97.622541&zoom=6.55&layers=estaciones_servicio_petroliferos' },
     backgroundImage: '/images/impacto-gasolineras.jpeg',
   },
 ];
@@ -431,7 +430,7 @@ export const electrificacionSolutions = [
     title: 'Conexiones Electricas',
     category: 'Generación eléctrica',
     description:
-      'Gracias a ello, las familias podran conectar sus aparatos electrónicos necesarios, como frigobar, focos, etc.',
+      'Gracias a ello, las familias podran conectar sus aparatos eléctricos como: focos, abanicos, frigobar,etc.',
     benefits: [
       'Aprovecha la radiación solar disponible en la comunidad.',
       'Permite electrificar viviendas alejadas de la red.',
@@ -498,10 +497,10 @@ export const gasolinerasSolutions = [
     alt: 'Estufa eficiente de leña del programa',
   },
   {
-    title: '¡Incorpora tu Estación al Programa!',
+    title: '¡Incorpora tu Estación!',
     category: 'Informes',
     description:
-      'Si ya cuentas con una Estación de Servicio en operación, incorpórala a la red del programa para sumar esfuerzos en la garantía de la justicia social y el desarrollo sustentable de las comunidades.',
+      'Si ya cuentas con una Estación de Servicio en operación, incorpórala a la red para sumar esfuerzos en la garantía de la justicia social y el desarrollo sustentable de las comunidades.',
     benefits: [
       'Renovación e imagen corporativa: Transición de marca acompañada institucionalmente con condiciones de adhesión transparentes',
       'Garantía de suministro y eficiencia: Estándares operativos de alta calidad y certidumbre en el abasto continuo de combustible trazable.',
@@ -777,7 +776,7 @@ export const estufasBenefits = {
       icon: '/images/beneficio5.png',
     },
     {
-      label: 'Cocción más segura y eficiente',
+      label: 'Cocción más segura y eficiente.',
       icon: '/images/beneficio6.png',
     },
   ],
